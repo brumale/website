@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		
+		<meta charset="utf-8">
+		
+		<title>Deca Bundle &ndash; 10 Fonts Selection</title>
+		
+		<meta name="description" content="Deca Bundle is a wide-ranging selection of font families. Created by Stefano Giliberti (brumale)">
+												
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+				
+		<link rel="icon" type="image/png" href="icon.png">
+				
+		<link rel="stylesheet" href="/stuff/slides18084242020.css">
+					
+		<link href="https://fonts.googleapis.com/css?family=Radley|Roboto+Mono&display=swap" rel="stylesheet">
+		
+		<script src="/stuff/slides16553292020.js"></script>
+		
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109208317-36"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-109208317-36');
+		</script>
+		
+		<style>
+		
+		header {
+			padding: 4%;
+		}
+		
+		header svg {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		header g {
+			cursor: pointer;
+		}
+		
+		.js.ready header path {
+			transition-property:
+				fill,
+				transform;
+			transition-duration: 2s;
+			transition-timing-function: cubic-bezier(.19,1,.22,1);
+		}
+			
+			.js.ready header g:nth-child( 1 ) path {
+				transition-delay: .1s;
+			}
+			
+			.js.ready header g:nth-child( 2 ) path {
+				transition-delay: .15s;
+			}
+			
+			.js.ready header g:nth-child( 3 ) path {
+				transition-delay: .2s;
+			}
+			
+			.js.ready header g:nth-child( 4 ) path {
+				transition-delay: .25s;
+			}
+			
+			.js.ready header g:nth-child( 5 ) path {
+				transition-delay: .3s;
+			}
+		
+			.js.ready header g:nth-child( 6 ) path {
+				transition-delay: .35s;
+			}
+			
+			.js.ready header g:nth-child( 7 ) path {
+				transition-delay: .4s;
+			}
+			
+			.js.ready header g:nth-child( 8 ) path {
+				transition-delay: .45s;
+			}
+			
+			.js.ready header g:nth-child( 9 ) path {
+				transition-delay: .5s;
+			}
+			
+			.js.ready header g:nth-child( 10 ) path {
+				transition-delay: .55s;
+			}
+			
+			.js:not( .ready ) header path:first-child {
+				fill: #fff;
+			}
+			
+			.js:not( .ready ) header path:last-child {
+				fill: #000;
+				transform: translateX( 10% ) translateY( 10% );
+			}
+
+		.card {
+			margin: 48px auto 40px;
+			display: table;
+			table-layout: fixed;
+		}
+		
+			.card .cell {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		
+		.number {
+			width: 56px;
+			height: 58px;
+			background-image: url(numbers.svg);
+			background-size: 1000%;
+			margin-right: 24px;
+		}
+		
+			.font:nth-child( 2 ) .number {
+				background-position-x: 11.111%;
+			}
+			
+			.font:nth-child( 3 ) .number {
+				background-position-x: 22.222%;
+			}
+			
+			.font:nth-child( 4 ) .number {
+				background-position-x: 33.333%;
+			}
+			
+			.font:nth-child( 5 ) .number {
+				background-position-x: 44.444%;
+			}
+			
+			.font:nth-child( 6 ) .number {
+				background-position-x: 55.555%;
+			}
+			
+			.font:nth-child( 7 ) .number {
+				background-position-x: 66.666%;
+			}
+			
+			.font:nth-child( 8 ) .number {
+				background-position-x: 77.777%;
+			}
+			
+			.font:nth-child( 9 ) .number {
+				background-position-x: 88.888%;
+			}
+			
+			.font:nth-child( 10 ) .number {
+				background-position-x: 100%;
+			}
+		
+		h3 {
+			font-family: Radley;
+			font-weight: 400;
+			font-size: 133%;
+			margin: 0 0 8px;
+		}
+		
+		.wrap {
+			max-width: 400px;
+			padding: 32px;
+			margin: 0 auto;
+			box-shadow: 0 8px 24px hsl( 0, 0%, 90% );
+			position: relative;
+		}
+		
+			.wrap ul:first-child {
+				font-weight: 700;
+			}
+			
+			.wrap:after {
+				content: ' ';
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 8px;
+				height: 100%;
+				background:
+					linear-gradient(
+						180deg,
+						#f9f9f9 10%,
+						#1a3528 10%,
+						#1a3528 20%,
+						#f2f2f2 20%,
+						#f2f2f2 30%,
+						#1c29d9 30%,
+						#1c29d9 40%,
+						#fff 40%,
+						#fff 50%,
+						#ffe800 50%,
+						#ffe800 60%,
+						#000 60%,
+						#000 70%,
+						#999 70%,
+						#999 80%,
+						#e5e5e5 80%,
+						#e5e5e5 90%,
+						#000 90%
+					);
+			}
+		
+		.get {
+			margin-top: 20px;
+		}
+		
+		footer {
+			text-align: center;
+			margin: 40px 0 56px;
+		}
+					
+		</style>
+		
+		<script>
+			
+		'use strict';
+
+		document.addEventListener( 'DOMContentLoaded', function() {
+			
+			var fonts = document.querySelectorAll( '.font' );
+				
+			document
+			.querySelectorAll( 'header g' )
+			.forEach( function( item, index ) {
+										
+				item.addEventListener( 'click', function( event ) {
+						
+					window.scrollTo( {
+						'behavior': 'smooth',
+						'left': 0,
+						'top': fonts[ index ].offsetTop
+					} );
+				
+				} );
+					
+			} );
+			
+		} );
+		
+		</script>
+		
+	</head>
+	
+	<body>	
+		
+		<header>
+		
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="210 401 1692 200"><g><path d="M210 601h200V401H210z" fill="#f9f9f9"/><path d="M255.55 434.26V567.5h51.01c9.52 0 18.47-1.62 26.65-4.76a60.63 60.63 0 0021.32-13.8c6.1-6 10.66-13.23 13.9-21.41a74.02 74.02 0 004.75-26.65c0-9.52-1.61-18.46-4.75-26.65-3.24-8.18-7.8-15.42-13.9-21.41-6-6-13.13-10.66-21.32-13.8a74.04 74.04 0 00-26.65-4.76zm23.8 23.8h27.21c12.76 0 23.6 3.99 31.22 11.6 7.52 7.62 11.61 18.37 11.61 31.22 0 12.85-4.1 23.6-11.6 31.22-7.62 7.61-18.47 11.6-31.23 11.6h-27.21z" fill="#bf9e77"/></g><g><path d="M410 601h150V401H410z" fill="#1a3528"/><path d="M485.82 460.89c-5.8 0-11.32.95-16.27 2.85a36.67 36.67 0 00-12.85 8.38 36.67 36.67 0 00-8.38 12.85 44.83 44.83 0 00-2.85 16.18c0 5.8.95 11.32 2.85 16.27a36.67 36.67 0 008.38 12.85 36.67 36.67 0 0012.85 8.38 45.35 45.35 0 0016.27 2.85c6.1 0 11.8-1.05 16.94-3.14a38.15 38.15 0 0013.23-9.23l3.52-3.8-7.7-7.05-3.62 3.8a25.5 25.5 0 01-9.42 6.57 33.7 33.7 0 01-12.95 2.38c-8.94 0-16.37-2.85-21.7-8.18-4.28-4.2-6.94-9.8-7.8-16.47h69.76v-5.23c0-5.8-.95-11.23-2.85-16.18a36.65 36.65 0 00-8.38-12.85 36.67 36.67 0 00-12.85-8.38 44.84 44.84 0 00-16.18-2.85zm0 10.47c8.85 0 16.37 2.76 21.7 8.09 4.19 4.28 6.86 9.9 7.71 16.46h-58.91c.86-6.56 3.52-12.18 7.8-16.46 5.33-5.33 12.76-8.1 21.7-8.1z" fill="#ff5629"/></g><g><path d="M560 601h150V401H560z" fill="#f2f2f2"/><path d="M634.55 434.26c-11.7 0-18.75 4.57-22.55 8.37-3.81 3.81-8.38 10.85-8.38 22.56v71.38c0 11.7 4.57 18.75 8.38 22.55 3.8 3.81 10.85 8.38 22.55 8.38 11.7 0 18.75-4.57 22.56-8.38 3.8-3.8 8.37-10.85 8.37-22.55v-23.03h-22.27v23.03c0 4.28-1.14 6.09-1.8 6.76-1.62 1.61-4.95 1.9-6.86 1.9-4.28 0-6.09-1.14-6.76-1.9-1.61-1.62-1.9-4.95-1.9-6.76v-71.38c0-4.28 1.14-6.1 1.9-6.76 1.62-1.71 4.95-1.9 6.76-1.9 4.28 0 6.1 1.14 6.85 1.9 1.62 1.62 1.81 4.95 1.81 6.76v23.03h22.27V465.2c0-11.7-4.57-18.75-8.37-22.56-3.8-3.8-10.85-8.37-22.56-8.37z" fill="#191919"/></g><g><path d="M710 601h200V401H710z" fill="#1c29d9"/><path d="M749.32 441.87v23.79h94.03c2.57 0 6.1.57 8.57 3.05 2.47 2.47 2.95 6 2.95 8.56v11.52h-81.85c-4.95 0-9.61.85-13.9 2.47a33.55 33.55 0 00-19.03 19.04 39.16 39.16 0 00-2.48 13.9c0 4.84.86 9.5 2.48 13.8a33.56 33.56 0 007.52 11.5 32.23 32.23 0 0011.51 7.53 39.14 39.14 0 0013.9 2.47h70.33c4.95 0 9.61-.86 13.9-2.47a32.23 32.23 0 0011.51-7.52 33.32 33.32 0 007.43-11.52 37 37 0 002.47-13.8v-46.92c0-4.95-.76-9.61-2.47-13.9a33.32 33.32 0 00-7.43-11.51 32 32 0 00-11.51-7.42 37.19 37.19 0 00-13.9-2.57zm105.55 70.71v11.61c0 2.48-.48 6.1-2.95 8.57-2.48 2.47-6 2.95-8.57 2.95h-70.33c-2.57 0-6.1-.48-8.57-2.95-2.47-2.48-3.04-6.1-3.04-8.57 0-2.57.57-6.19 3.04-8.56 2.48-2.48 6-3.05 8.57-3.05z" fill="#f4f0dc"/></g><g><path d="M910 601h180V401H910z" fill="#fff"/><path d="M954.57 434.26V567.5h66.62a12.1 12.1 0 008.57-3.62l11.8-11.6a11.93 11.93 0 003.42-8.57v-31.22c0-3.24-1.14-6.28-3.42-8.56l-3.05-3.05 3.05-3.05a11.93 11.93 0 003.42-8.56v-31.22c0-3.23-1.14-6.28-3.42-8.56l-11.8-11.62a12.1 12.1 0 00-8.57-3.61zm3.04 3.04h63.58c2.28 0 4.57.96 6.47 2.67l11.8 11.61a9.76 9.76 0 012.48 6.47v31.22c0 2.47-.96 4.76-2.48 6.47l-3.04 3.05-2.29 2.09 2.29 2.1 3.04 3.04a9.76 9.76 0 012.48 6.47v31.22c0 2.47-.96 4.76-2.48 6.47l-11.8 11.61a9.76 9.76 0 01-6.47 2.67h-63.58zm2.29 2.29v122.58h61.29c1.71 0 3.43-.76 4.76-2.1l11.8-11.6a6.7 6.7 0 001.9-4.76v-31.22a6.7 6.7 0 00-1.9-4.76l-6.85-6.85 6.85-6.85a6.7 6.7 0 001.9-4.76v-31.22a6.7 6.7 0 00-1.9-4.76l-11.8-11.6a6.81 6.81 0 00-4.76-2.1zm3.04 3.04h58.25c.95 0 1.9.38 2.66 1.15l11.8 11.6c.58.77.96 1.53.96 2.67v31.22c0 1.14-.38 1.9-.95 2.66l-8.95 8.95 8.95 8.95c.57.76.95 1.52.95 2.66v31.22c0 1.14-.38 1.9-.95 2.66l-11.8 11.61a3.76 3.76 0 01-2.67 1.14h-58.25zm2.29 2.29v111.92h55.96c.38 0 .76-.38.95-.57l11.8-11.61c.2-.2.38-.57.38-.95v-31.22c0-.57-.19-.76-.38-.95l-10.47-10.66 10.47-10.66c.2-.19.38-.38.38-.95v-31.22c0-.38-.19-.76-.38-.95l-11.8-11.61c-.19-.2-.57-.57-.95-.57zm3.04 3.04h52.54l10.47 10.85v29.7l-10.47 10.85h-52.54zm52.54 3.24l-.95-.95h-49.3v46.82h49.3l.95-.95 7.42-7.8.76-.76v-27.8l-.76-.76zm-47.2 2.1h44.91l7.43 7.8v25.12l-7.43 7.8H973.6zm44.91 3.23l-.95-.95H975.9v36.16h41.68l.95-.95 4.38-4.57.76-.95v-23.22l-.76-.95zm-39.59 2.1h37.31l4.38 4.56v20.94l-4.38 4.57h-37.3zm-10.66 43.77h52.54l10.47 10.85v29.7l-10.47 10.84h-52.54zm52.54 3.24l-.95-.95h-49.3v46.82h49.3l.95-.95 7.42-7.8.76-.77V514.2l-.76-.76zm-47.2 2.1h44.91l7.43 7.8v25.12l-7.43 7.8H973.6zm44.91 3.23l-.95-.95H975.9v36.16h41.68l.95-.95 4.38-4.57.76-.95v-23.22l-.76-.95zm-39.59 2.1h37.31l4.38 4.56v20.94l-4.38 4.57h-37.3z" fill="red"/></g><g><path d="M1090 601h160V401h-160z" fill="#ffe800"/><path d="M1202.48 454.3a9.54 9.54 0 00-9.51 9.52v49.11c0 12.76-10.47 23.04-23.23 23.04a22.99 22.99 0 01-23.03-23.04v-49.1a9.67 9.67 0 00-9.52-9.52 9.55 9.55 0 00-9.51 9.51v49.11c0 11.23 4.38 21.7 12.37 29.7 8 8 18.46 12.37 29.7 12.37a42.05 42.05 0 0029.88-12.37c8-8 12.37-18.47 12.37-29.7v-49.1a9.67 9.67 0 00-9.52-9.52z"/></g><g><path d="M1250 601h132V401h-132z"/><path d="M1331.95 434.26a6.17 6.17 0 00-6.18 6.19v73.85l-20.18-75.47a6.15 6.15 0 00-6.75-4.48 6.09 6.09 0 00-5.43 6.1V561.3a6.17 6.17 0 006.19 6.19 6.17 6.17 0 006.18-6.19v-73.85l20.18 75.47a6.2 6.2 0 006 4.57c2.18 0 6.18-1.62 6.18-6.19V440.45a6.17 6.17 0 00-6.19-6.2z" fill="#ff2600"/></g><g><path d="M1382 601h160V401h-160z" fill="#999"/><path d="M1501 565V431.76h-15.23v36.36c-5.9-3.24-13.7-4.95-23.8-4.95h-7.99c-13.89 0-23.4 3.04-29.69 9.32-6.28 6.47-9.33 15.8-9.33 29.89v23.6c0 13.9 3.05 23.41 9.33 29.7 6.28 6.28 15.8 9.32 29.7 9.32zm-39.02-86.6c9.52 0 15.6 1.7 18.84 4.94 3.43 3.24 4.95 9.52 4.95 19.04v47.4h-31.79c-9.51 0-15.6-1.53-18.84-4.96-3.43-3.23-4.95-9.32-4.95-18.84v-23.6c0-9.52 1.52-15.8 4.95-19.04 3.24-3.23 9.33-4.95 18.84-4.95z" fill="#fff"/></g><g><path d="M1542 601h160V401h-160z" fill="#e5e5e5"/><path d="M1589.32 556.08V434.26h-11.42V567.5h89.75v-11.42z" fill="#666"/></g><g><path d="M1702 601h200V401h-200z"/><path d="M1865.07 474.23v-39.97h-126.58V567.5h126.58v-39.97h-86.61v-6.66h86.6v-39.98h-86.6v-6.66z" fill="#fff"/></g></svg>
+			
+		</header>
+		
+		<main>
+			
+						
+			<div class="font">
+				
+				<div class="slider">
+					
+					<img data-slides="10" src="../adita/slides.svg">
+					
+					<div class="button">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
+						
+					</div>
+					
+				</div>
+				
+				<div class="card">
+
+					<div class="cell">
+						
+						<div class="number"></div>
+												
+					</div>
+					
+					<div class="cell">
+						
+						<h3>Adita</h3>
+						
+						<ul>
+							
+													
+							<li>92 Languages</li>
+							
+													
+							<li>485 Glyphs</li>
+							
+													
+							<li>5 Weights</li>
+							
+													
+							<li>5 Styles</li>
+							
+																																		
+						</ul>
+						
+					</div>
+				
+				</div>
+			
+			</div>
+			
+						
+			<div class="font">
+				
+				<div class="slider">
+					
+					<img data-slides="10" src="../giordano/slides.svg">
+					
+					<div class="button">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
+						
+					</div>
+					
+				</div>
+				
+				<div class="card">
+
+					<div class="cell">
+						
+						<div class="number"></div>
+												
+					</div>
+					
+					<div class="cell">
+						
+						<h3>Giordano</h3>
+						
+						<ul>
+							
+													
+							<li>92 Languages</li>
+							
+													
+							<li>483 Glyphs</li>
+							
+													
+							<li>5 Weights</li>
+							
+													
+							<li>5 Styles</li>
+							
+																																		
+						</ul>
+						
+					</div>
+				
+				</div>
+			
+			</div>
+			
+						
+			<div class="font">
+				
+				<div class="slider">
+					
+					<img data-slides="10" src="../denso/slides.svg">
+					
+					<div class="button">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
+						
+					</div>
+					
+				</div>
+				
+				<div class="card">
+
+					<div class="cell">
+						
+						<div class="number"></div>
+												
+					</div>
+					
+					<div class="cell">
+						
+						<h3>Denso</h3>
+						
+						<ul>
+							
+													
+							<li>90 Languages</li>
+							
+													
+							<li>309 Glyphs</li>
+							
+													
+							<li>3 Weights</li>
+							
+													
+							<li>9 Styles</li>
+							
+																																		
+						</ul>
+						
+					</div>
+				
+				</div>
+			
+			</div>
+			
+						
+			<div class="font">
+				
+				<div class="slider">
+					
+					<img data-slides="10" src="../sauro/slides.svg">
+					
+					<div class="button">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
+						
+					</div>
+					
+				</div>
+				
+				<div class="card">
+
+					<div class="cell">
+						
+						<div class="number"></div>
+												
+					</div>
+					
+					<div class="cell">
+						
+						<h3>Sauro</h3>
+						
+						<ul>
+							
+													
+							<li>92 Languages</li>
+							
+													
+							<li>482 Glyphs</li>
+							
+													
+							<li>5 Weights</li>
+							
+													
+							<li>5 Styles</li>
+							
+																																		
+						</ul>
+						
+					</div>
+				
+				</div>
+			
+			</div>
+			
+						
+			<div class="font">
+				
+				<div class="slider">
+					
+					<img data-slides="10" src="../parco/slides.svg">
+					
+					<div class="button">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
+						
+					</div>
+					
+				</div>
+				
+				<div class="card">
+
+					<div class="cell">
+						
+						<div class="number"></div>
+												
+					</div>
+					
+					<div class="cell">
+						
+						<h3>Parco</h3>
+						
+						<ul>
+							
+													
+							<li>90 Languages</li>
+							
+													
+							<li>311 Glyphs</li>
+							
+													
+							<li>10 Styles</li>
+							
+																																		
+						</ul>
+						
+					</div>
+				
+				</div>
+			
+			</div>
+			
+						
+			<div class="font">
+				
+				<div class="slider">
+					
+					<img data-slides="10" src="../voluta/slides.svg">
+					
+					<div class="button">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
+						
+					</div>
+					
+				</div>
+				
+				<div class="card">
+
+					<div class="cell">
+						
+						<div class="number"></div>
+												
+					</div>
+					
+					<div class="cell">
+						
+						<h3>Voluta</h3>
+						
+						<ul>
+							
+													
+							<li>93 Languages</li>
+							
+													
+							<li>508 Glyphs</li>
+							
+													
+							<li>5 Weights</li>
+							
+													
+							<li>5 Styles</li>
+							
+																																		
+						</ul>
+						
+					</div>
+				
+				</div>
+			
+			</div>
+			
+						
+			<div class="font">
+				
+				<div class="slider">
+					
+					<img data-slides="10" src="../sonico/slides.svg">
+					
+					<div class="button">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
+						
+					</div>
+					
+				</div>
+				
+				<div class="card">
+
+					<div class="cell">
+						
+						<div class="number"></div>
+												
+					</div>
+					
+					<div class="cell">
+						
+						<h3>Sonico</h3>
+						
+						<ul>
+							
+													
+							<li>92 Languages</li>
+							
+													
+							<li>482 Glyphs</li>
+							
+													
+							<li>5 Weights</li>
+							
+													
+							<li>5 Styles</li>
+							
+																																		
+						</ul>
+						
+					</div>
+				
+				</div>
+			
+			</div>
+			
+						
+			<div class="font">
+				
+				<div class="slider">
+					
+					<img data-slides="10" src="../stoica/slides.svg">
+					
+					<div class="button">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
+						
+					</div>
+					
+				</div>
+				
+				<div class="card">
+
+					<div class="cell">
+						
+						<div class="number"></div>
+												
+					</div>
+					
+					<div class="cell">
+						
+						<h3>Stoica</h3>
+						
+						<ul>
+							
+													
+							<li>93 Languages</li>
+							
+													
+							<li>508 Glyphs</li>
+							
+													
+							<li>5 Weights</li>
+							
+													
+							<li>5 Styles</li>
+							
+																																		
+						</ul>
+						
+					</div>
+				
+				</div>
+			
+			</div>
+			
+						
+			<div class="font">
+				
+				<div class="slider">
+					
+					<img data-slides="10" src="../aperta/slides.svg">
+					
+					<div class="button">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
+						
+					</div>
+					
+				</div>
+				
+				<div class="card">
+
+					<div class="cell">
+						
+						<div class="number"></div>
+												
+					</div>
+					
+					<div class="cell">
+						
+						<h3>Aperta</h3>
+						
+						<ul>
+							
+													
+							<li>92 Languages</li>
+							
+													
+							<li>467 Glyphs</li>
+							
+													
+							<li>5 Weights</li>
+							
+													
+							<li>5 Styles</li>
+							
+																																		
+						</ul>
+						
+					</div>
+				
+				</div>
+			
+			</div>
+			
+						
+			<div class="font">
+				
+				<div class="slider">
+					
+					<img data-slides="10" src="../osmica/slides.svg">
+					
+					<div class="button">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
+						
+					</div>
+					
+				</div>
+				
+				<div class="card">
+
+					<div class="cell">
+						
+						<div class="number"></div>
+												
+					</div>
+					
+					<div class="cell">
+						
+						<h3>Osmica</h3>
+						
+						<ul>
+							
+													
+							<li>90 Languages</li>
+							
+													
+							<li>480 Glyphs</li>
+							
+													
+							<li>5 Weights</li>
+							
+													
+							<li>25 Styles</li>
+							
+																																		
+						</ul>
+						
+					</div>
+				
+				</div>
+			
+			</div>
+			
+						
+		</main>
+		
+		<div class="wrap">
+							
+			<ul>
+										
+				<li>10 Font Families</li>
+				
+				<li>122 Fonts</li>
+				
+				<li>62% Savings</li>
+																												
+			</ul>
+			
+			<a href="https://gum.co/decabundle" target="_blank" class="get">Get Deca Bundle</a>
+						
+			<a href="https://creativemarket.com/brumale/4633239-Deca-Bundle-–-10-Fonts-Selection" target="_blank" class="getoncm">Get on Creative Market</a>
+												
+		</div>
+	
+		<footer>
+			
+			<a href="https://www.brumale.xyz" class="from">
+									
+				<img src="/stuff/smallstefano032020.jpg" alt="Stefano Giliberti's face in March 2020" width="48" height="48">
+				
+				<span>Stefano Giliberti</span>
+			
+			</a>
+		
+		</footer>
+			
+	</body>
+
+</html>
