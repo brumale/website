@@ -34,8 +34,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
 						
 						x = Math.max( 0, window.pageXOffset ) + event.clientX - parent.offsetLeft;
 						y = Math.max( 0, window.pageYOffset ) + event.clientY - parent.offsetTop;
-						ry = - ( parent.offsetWidth / 2 - x ) / 40,
-						rx = ( parent.offsetHeight / 2 - y ) / 40;
+						ry = - ( parent.offsetWidth / 2 - x ) / 33,
+						rx = ( parent.offsetHeight / 2 - y ) / 33;
 								  
 						item.style.transform = 'rotateY(' + ry + 'deg) rotateX(' + rx + 'deg)';
 					
