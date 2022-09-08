@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 
-<html lang="en" class="nojs">
+<html lang="en">
 
 	<head>
 				
 		<meta charset="utf-8">
 		
-		<title>Altero &ndash; Font Family</title>
+		<title>Altero – Font</title>
 		
-		<meta name="description" content="Altero is a font family for larger-than-life words. Created by Stefano Giliberti (brumale)">
+		<meta name="description" content="The font family created by Stefano Giliberti (brumale)">
 												
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<link rel="icon" type="image/png" href="icon.png">
 		
-		<link href="https://fonts.googleapis.com/css?family=Radley|Roboto+Mono&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/website/website.css">
+			
+		<link rel="stylesheet" href="/website/font.css">
 		
-		<link rel="stylesheet" href="/stuff/slides5722.css">
-		
-		<link rel="stylesheet" href="/stuff/products27221.css">
-		
-		<script src="/stuff/slides19921.js"></script>
-		
-		<script src="/stuff/products27221.js"></script>
-		
-		<script async src="https://gumroad.com/js/gumroad.js"></script>
-		
+		<script src="/website/website.js"></script>
+			
+		<script src="/website/font.js"></script>
+
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-5168VCLMRR"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -34,19 +30,68 @@
 		
 		  gtag('config', 'G-5168VCLMRR');
 		</script>
-				
+		
 		<style>
-		.products a[href*="altero"] {
+		
+		.products a[href*=altero] {
 			display: none;
-		}</style>
+		}
+		
+		@font-face {
+			font-family: Altero;
+			src: url(/website/fonts/Altero-Regular.woff2) format(woff2);
+		}
+		
+		.font {
+			font-family: Altero;
+		}
+		
+		@font-face {
+			font-family: Altero-Outline;
+			src: url(/website/fonts/Altero-Outline.woff2) format(woff2);
+		}
+		
+		.font2 {
+			font-family: Altero-Outline;
+		}
+
+		</style>
 
 	</head>
 	
 	<body>
+				
+		<header>
+			
+			<a href="https://www.brumale.xyz">
+				
+				<img class="logo" src="/website/symbol.png">
+				
+			</a>
+			
+			<h1>Altero</h1>
+			
+			<h6>Font</h6>
 		
-		<main>
+		</header>
 		
-			<div data-slides="10" class="slider">
+		<div class="sample font">
+			
+			<p class="typing awaiting">ABCDEFGHIJKLM</p>
+			
+			<p class="typing awaiting">NOPQRSTUVWXYZ</p>
+			
+			<p class="typing awaiting font2">ABCDEFGHIJKLM</p>
+			
+			<p class="typing awaiting font2">NOPQRSTUVWXYZ</p>
+			
+			<p class="typing awaiting">1234567890</p>
+		
+		</div>
+		
+		<div class="sliderwrap">
+			
+			<div class="slider awaiting" data-slides="10">
 				
 				<div class="slides">
 					
@@ -58,66 +103,222 @@
 				
 				</div>
 				
-				<div class="button">
+				<div class="skip"></div>
+				
+			</div>
+		
+		</div>
+		
+		<h2>4 Variants</h2>
+		
+		<div class="test">
+			
+			<div class="overlay">
+				
+				<div class="overlayinside">
 					
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
+					<div class="overlaycontent">
+						
+						<div class="styles">
+							
+							<div class="current">Regular</div>
+							
+							<div>Outline</div>
+							
+						</div>
+				
+					</div>
 					
 				</div>
 				
 			</div>
 			
-			<div class="content">
+			<div class="style">Regular</div>
 			
-				<div class="column large">
-					
-					<h1>Altero is a font family for larger-than-life words</h1>
-	
-				</div>
+			<div class="italic">Italic</div>
+			
+			<div class="red">
+			
+				<div class="type font typing awaiting" contenteditable spellcheck="false">Altero</div>
+			
+			</div>
+			
+			<div class="theme">
 				
-				<div class="column small">
-					
-					<ul>
-						
-											
-						<li>91 Languages</li>
-						
-											
-						<li>390 Glyphs</li>
-						
-											
-						<li>4 Styles</li>
-						
-																																
-					</ul>
-					
-				</div>
+				<div class="red"></div>
 				
-				<div class="column small">
-					
-					<a class="gumroad-button" data-gumroad-single-product="true" href="https://brumale.gumroad.com/l/altero">Buy on</a>
-					
-					<br>
-										
-					<a href="https://creativemarket.com/brumale/6246279-Altero-–-Font-Family" target="_blank" class="getoncm">Buy on Creative Market</a>
-														
-				</div>
+				<div class="white"></div>
 				
-				<div class="column full">
-					
-					<a href="https://www.brumale.xyz" class="from">
+				<div class="black"></div>
+			
+			</div>
+								
+		</div>
+		
+		<h2>505 Glyphs</h2>
+		
+		<div class="glyphs font">
+			
+			<div>&</div>
+			
+			<div>½</div>
+			
+			<div>@</div>
+			
+			<div>“</div>
+			
+			<div>—</div>
+			
+			<div>#</div>
+			
+			<div>?</div>
+			
+			<div>!</div>
+			
+			<div>%</div>
+			
+			<div>£</div>
+			
+			<div>¥</div>
+			
+			<div>↑</div>
+			
+			<div>↗</div>
+			
+			<div>→</div>
+			
+			<div>↘</div>
+			
+			<div>↓</div>
+			
+			<div>↔</div>
+			
+			<div>↕</div>
+			
+			<div>~</div>
+			
+			<div>+</div>
+			
+			<div>«</div>
+			
+			<div>^</div>
+			
+			<div>(</div>
+			
+			<div>¢</div>
+			
+			<div>*</div>
+			
+			<div>©</div>
+			
+			<div>/</div>
+			
+			<div>;</div>
+			
+			<div>$</div>
+			
+			<div>×</div>
+			
+			<div>™</div>
+			
+			<div>€</div>
+
+		</div>
+		
+		<h2>112 Languages</h2>
+		
+		<div class="language">
+			
+			<div class="font">
+			
+				<div>Perché</div>
 									
-						<img src="/stuff/smallstefano062021.jpg" alt="Stefano Giliberti's face in June 2021" width="48" height="48">
-						
-						<span>Stefano Giliberti</span>
-					
-					</a>
-					
+				<div>Mañana</div>
+				
+				<div>Garçon</div>
+				
+				<div>Você</div>
+				
+				<div>Mädchen</div>
+				
+				<div>Karşı</div>
+				
+				<div>Từ</div>
+				
+				<div>Gorący</div>
+				
+				<div>Casă</div>
+									
+				<div>Első</div>
+				
+				<div>Akọkọ</div>
+				
+				<div>Světlo</div>
+				
+				<div>Luajnë</div>
+				
+				<div>Það</div>
+				
+				<div>Kažu</div>
+				
+				<div>Måde</div>
+				
+				<div>Kõrge</div>
+				
+				<div>Elämä</div>
+				
+				<div>Šķērsot</div>
+				
+				<div>Aħmar</div>
+				
+				<div>Første</div>
+				
+				<div>Många</div>
+				
+				<div>Napísať</div>
+				
+				<div>Inštrument</div>
+				
+				<div>N’ụlọ</div>
+									
+			</div>
+			
+			<div class="marquee">
+				
+				<div>Afrikaans, Albanian, Asu, Basque, Bemba, Bena, Bosnian, Catalan, Cebuano, Chiga, Cornish, Corsican, Croatian, Czech, Danish, Embu, English, Estonian, Faroese, Filipino, Finnish, French, Friulian, Galician, Ganda, Gusii, Hungarian, Icelandic, Ido, Inari Sami, Indonesian, Interlingua, Irish, Italian, Javanese, Jju, Jola-Fonyi, Kabuverdianu, Kalaallisut, Kalenjin, Kamba, Kikuyu, Kinyarwanda, Kurdish, Latvian, Lithuanian, Lojban, Low German, Lower Sorbian, Luo, Luxembourgish, Luyia, Machame, Makhuwa-Meetto, Makonde, Malagasy, Malay, Maltese, Manx, Maori, Meru, Morisyen, North Ndebele, Northern Sami, Northern Sotho, Norwegian Bokmål, Norwegian Nynorsk, Nyanja, Nyankole, Occitan, Oromo, Polish, Portuguese, Romanian, Romansh, Rombo, Rundi, Rwa, Samburu, Sango, Sangu, Sardinian, Scottish Gaelic, Sena, Shambala, Shona, Slovak, Slovenian, Soga, Somali, South Ndebele, Southern Sotho, Spanish, Swahili, Swati, Swedish, Swiss German, Taita, Taroko, Teso, Tsonga, Tswana, Turkmen, Upper Sorbian, Vietnamese, Vunjo, Walloon, Walser, Welsh, Wolof, Xhosa, Zulu</div>
+			
+			</div>
+			
+		</div>
+		
+		<div class="buywrap">
+		
+			<div class="buy awaiting">
+				
+				<div class="inner">
+									
+					<h1 class="font">Altero</h1>
+										
+					<div><a href="https://brumale.gumroad.com/l/altero" target="_blank">Buy on Gumroad</a> ↗</div>
+															
+					<div><a href="https://creativemarket.com/brumale/6246279-Altero-–-Font-Family" target="_blank">Buy on Creative Market</a> ↗</div>
+				
 				</div>
 			
 			</div>
 			
-		</main>
-			
+			<a class="from" href="https://www.brumale.xyz">
+				
+				<img class="logo" src="/website/symbol.png">
+				
+				<h5>Stefano Giliberti</h5>
+				
+			</a>
+		
+		</div>
+		
+		<div class="products"></div>
+						
 	</body>
 
 </html>

@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 
-<html lang="en" class="nojs">
+<html lang="en">
 
 	<head>
-				
+		
 		<meta charset="utf-8">
 		
-		<title>Mani &ndash; Hand Signs Vector Illustrations</title>
+		<title>Mani – Hand Signs Vector Illustrations</title>
 		
 		<meta name="description" content="Mani is a series of hand signs vector illustrations. Created by Stefano Giliberti (brumale)">
 												
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+				
 		<link rel="icon" type="image/png" href="icon.png">
 		
-		<link href="https://fonts.googleapis.com/css?family=Radley|Roboto+Mono&display=swap" rel="stylesheet">
-		
-		<link rel="stylesheet" href="/stuff/slides5722.css">
-		
-		<link rel="stylesheet" href="/stuff/products27221.css">
-		
-		<script src="/stuff/slides19921.js"></script>
-		
-		<script src="/stuff/products27221.js"></script>
-		
-		<script async src="https://gumroad.com/js/gumroad.js"></script>
-		
+		<link rel="stylesheet" href="/website/website.css">
+								
+		<script src="/website/website.js"></script>
+				
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-5168VCLMRR"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -33,91 +25,303 @@
 		  gtag('js', new Date());
 		
 		  gtag('config', 'G-5168VCLMRR');
-		</script>	
+		</script>
 		
 		<style>
-		.products a[href*="mani"] {
-			display: none;
-		}</style>
 
+		.hands {
+			margin: 48px auto;
+			padding: 0 16px;
+			max-width: 600px;
+			display: grid; 
+			grid-template-rows: 1fr 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: 0 24px;
+			align-items: center;
+		}
+		
+		.hands div:nth-child(1) svg,
+		.hands div:nth-child(8) svg {
+			fill: #fff;
+		}
+		
+		.hands div,
+		.hands svg {
+			transition: transform 1s cubic-bezier(.34,1.56,.64,1);
+		}
+
+		.hands div:nth-child(1) {
+			transition-delay: .1s;
+		}
+		
+		.hands div:nth-child(2) {
+			transition-delay: .2s;
+		}
+		
+		.hands div:nth-child(3) {
+			transition-delay: .3s;
+		}
+		
+		.hands div:nth-child(4) {
+			transition-delay: .4s;
+		}
+		
+		.hands div:nth-child(7) {
+			transition-delay: .5s;
+		}
+		
+		.hands div:nth-child(6) {
+			transition-delay: .6s;
+		}
+		
+		.hands div:nth-child(5) {
+			transition-delay: .7s;
+		}
+		
+		.hands div:nth-child(11) {
+			transition-delay: .8s;
+		}
+		
+		.hands div:nth-child(10) {
+			transition-delay: .9s;
+		}
+		
+		.hands div:nth-child(9) {
+			transition-delay: 1s;
+		}
+		
+		.hands div:nth-child(12) {
+			transition-delay: 1.1s;
+		}
+		
+		.hands div:nth-child(13) {
+			transition-delay: 1.2s;
+		}
+		
+		.hands div:nth-child(14) {
+			transition-delay: 1.3s;
+		}
+		
+		.hands div:nth-child(8) {
+			transition-delay: 1.4s;
+		}
+		
+		.flipped div {
+			transform: rotateY( 180deg );
+		}
+		
+		.hands .awaiting svg {
+			transform: scale( 0 );
+		}
+
+		.hands div:nth-child(1) {
+			grid-row-start: 1;
+			grid-column-start: 1;		
+			grid-row-end: 3;
+			grid-column-end: 3;
+		}
+		
+		.hands div:nth-child(2) {
+			grid-row-start: 1;
+			grid-column-start: 3;		
+			grid-row-end: 2;
+			grid-column-end: 4;
+		}
+		
+		.hands div:nth-child(3) {
+			grid-row-start: 1;
+			grid-column-start: 4;
+			grid-row-end: 2;
+			grid-column-end: 5;		   
+		}
+		
+		.hands div:nth-child(4) {
+			grid-row-start: 1;
+			grid-column-start: 5;
+			grid-row-end: 2;
+			grid-column-end: 6;	   
+		}
+		
+		.hands div:nth-child(5) {
+			grid-row-start: 2;
+			grid-column-start: 3;
+			grid-row-end: 3;
+			grid-column-end: 4;
+		}
+		
+		.hands div:nth-child(6) {
+			grid-row-start: 2;
+			grid-column-start: 4;
+			grid-row-end: 3;
+			grid-column-end: 5;
+		}
+		
+		.hands div:nth-child(7) {
+			grid-row-start: 2;
+			grid-column-start: 5;
+			grid-row-end: 3;
+			grid-column-end: 6;		   
+		}
+		
+		.hands div:nth-child(8) {
+			grid-row-start: 3;
+			grid-column-start: 4;		
+			grid-row-end: 5;
+			grid-column-end: 6;
+		}
+		
+		.hands div:nth-child(9) {
+			grid-row-start: 3;
+			grid-column-start: 1;
+			grid-row-end: 4;
+			grid-column-end: 2;	   
+		}
+		
+		.hands div:nth-child(10) {
+			grid-row-start: 3;
+			grid-column-start: 2;
+			grid-row-end: 4;
+			grid-column-end: 3;
+		}
+		
+		.hands div:nth-child(11) {
+			grid-row-start: 3;
+			grid-column-start: 3;
+			grid-row-end: 4;
+			grid-column-end: 4;   
+		}
+		
+		.hands div:nth-child(12) {
+			grid-row-start: 4;
+			grid-column-start: 1;
+			grid-row-end: 5;
+			grid-column-end: 2;
+		}
+		
+		.hands div:nth-child(13) {
+			grid-row-start: 4;
+			grid-column-start: 2;
+			grid-row-end: 5;
+			grid-column-end: 3;
+		}
+		
+		.hands div:nth-child(14) {
+			grid-row-start: 4;
+			grid-column-start: 3;		
+			grid-row-end: 5;
+			grid-column-end: 4;  
+		}
+		
+		h3 {
+			margin-bottom: 24px;
+		}
+		
+		@media ( max-width: 500px ) {
+			
+			.hands {
+				gap: 12px;
+			}
+		
+		}
+
+		</style>
+		
+		<script>
+		
+		'use strict';
+				
+		document.addEventListener( 'DOMContentLoaded', function() {
+
+			var hands = document.querySelector( '.hands' );
+			
+			setInterval( function() {
+			
+				hands.classList.toggle( 'flipped' );
+				
+			}, 7000 );
+	
+		} );
+		
+		</script>
+		
 	</head>
 	
-	<body>
-		
-		<main>
-		
-			<div data-slides="4" class="slider">
+	<body>	
 				
-				<div class="slides">
+		<header>
+			
+			<a href="https://www.brumale.xyz">
+				
+				<img class="logo" src="/website/symbol.png">
+				
+			</a>
+			
+			<h1>Mani</h1>
+			
+			<h6>Vectors</h6>
+		
+		</header>
+
+		<div class="hands">
+
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464 831.1"><path d="M464 546.9v-111c0-34.6-3.8-59.1-11.6-74.8-7.6-15.2-18.8-22.2-35.4-22.2s-27.8 7.1-35.4 22.2c-7.8 15.7-11.6 40.1-11.6 74.8v110.9h-6v-419c0-50.5-14.1-72-47-72s-47 21.5-47 72V389h-6V72c0-50.5-14.1-72-47-72s-47 21.5-47 72v317h-6V120.4c0-45.2-12.6-64.5-42-64.5s-42 19.3-42 64.5v304.4h-6V213c0-50.2-18.7-57-37-57s-37 6.8-37 57v333.9C0 647.1 17 718 52 763.7c34.8 45.4 88.8 67.5 165 67.5 86.9 0 148.4-22.1 188-67.7s59-116.5 59-216.6z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 831.1"><path d="M414 619c-.2-66.1-12.8-113-38.5-143.2s-65.9-45.1-122.6-45.1H232c-34.6 0-59.1 3.8-74.8 11.6-15.2 7.6-22.2 18.8-22.2 35.4s7.1 27.8 22.2 35.4c15.7 7.8 40.1 11.6 74.8 11.6h20.9v6H232c-25.9 0-46.5-2.2-62.4-6.7-2.4 40-17.4 58-47.6 58-23.8 0-38.2-11.2-44.4-35.6-5 24.4-18.1 35.6-40.6 35.6-18.3 0-30.3-7.4-36.9-23.2 1.3 93.9 18.3 161 51.9 204.8 34.8 45.4 88.8 67.5 165 67.5 69.4 0 118.4-16.4 150-50.1s47-86.2 47-160.4V619z"/><path d="M37 575.9c18.3 0 37-6.8 37-57v-136c0-50.2-18.7-57-37-57s-37 6.8-37 57v136c0 50.3 18.7 57 37 57zm85 0c27 0 39.8-16.2 41.7-53.8-23.7-8.3-34.7-22.8-34.7-44.5s11.1-36.3 35-44.6v-97c0-45.2-12.6-64.5-42-64.5S80 290.8 80 336v175.3c0 45.4 12.6 64.6 42 64.6zm130.9-151.2c48 0 84.6 10.4 111.1 31.6V127.9c0-50.5-14.1-72-47-72s-47 21.5-47 72V389h-6V72c0-50.5-14.1-72-47-72s-47 21.5-47 72v359.3c15.8-4.4 36.3-6.6 62-6.6h20.9z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 831.1"><path d="M122 575.9c27 0 39.8-16.2 41.7-53.8-23.7-8.3-34.7-22.8-34.7-44.5s11.1-36.3 35-44.6v-97c0-45.2-12.6-64.5-42-64.5S80 290.8 80 336v175.3c0 45.4 12.6 64.6 42 64.6z"/><path d="M414 619c-.2-66.1-12.8-113-38.5-143.2s-65.9-45.1-122.6-45.1H232c-34.6 0-59.1 3.8-74.8 11.6-15.2 7.6-22.2 18.8-22.2 35.4s7.1 27.8 22.2 35.4c4 2 8.1 3.6 12.4 4.8 15.2 4.6 35.8 6.8 62.4 6.8h20.9v6H232c-25.9 0-46.6-2.2-62.4-6.7-2.5 39.9-17.4 57.9-47.6 57.9-33.2 0-48-21.7-48-70.5V213c0-50.2-18.7-57-37-57s-37 6.8-37 57v334.4c.1 99.9 17.1 170.7 52 216.3 34.8 45.4 88.8 67.5 165 67.5 69.4 0 118.4-16.4 150-50.1s47-86.2 47-160.4V619z"/><path d="M252.9 424.7c48 0 84.6 10.4 111.1 31.6V127.9c0-50.5-14.1-72-47-72s-47 21.5-47 72V389h-6V72c0-50.5-14.1-72-47-72s-47 21.5-47 72v359.3c15.8-4.4 36.3-6.6 62-6.6h20.9z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 775.3"><path d="M252.9 368.9c3.8 0 7.5.1 11.1.2V267.8c0-50.5-14.1-72-47-72s-47 21.5-47 72v107.6c15.8-4.4 36.3-6.6 62-6.6h20.9zM217 520.1c26.4 0 40.6-13.8 45.3-45.2H232c-25.2 0-45.4-2-61.1-6.3 3.7 35.8 18 51.5 46.1 51.5zm-95 0c27 0 39.8-16.2 41.7-53.8C140 458 129 443.5 129 421.8s11.1-36.3 35-44.6v-97c0-45.2-12.6-64.5-42-64.5S80 235 80 280.2v175.3c0 45.3 12.6 64.6 42 64.6zm-85 0c18.3 0 37-6.8 37-57v-136c0-50.2-18.7-57-37-57s-37 6.8-37 57v136c0 50.2 18.7 57 37 57zm327-187V72c0-50.5-14.1-72-47-72s-47 21.5-47 72v297.3c39.7 2.2 70.7 12.5 94 31.1v-67.3z"/><path d="M414 562.8c-.2-66-12.8-112.7-38.5-142.9-25.8-30.3-65.9-45.1-122.6-45.1H232c-34.6 0-59.1 3.8-74.8 11.6C142 394 135 405.2 135 421.8s7.1 27.8 22.2 35.4c15.7 7.8 40.1 11.6 74.8 11.6h37c-4 39.4-20.5 57.2-52 57.2-26.9 0-42.8-12.9-49.4-41.1-5.4 28.2-20 41.1-45.6 41.1-23.8 0-38.2-11.2-44.4-35.6-5 24.4-18.1 35.6-40.6 35.6-18.3 0-30.3-7.4-36.9-23.2 1.3 93.9 18.3 161 51.9 204.8 34.8 45.4 88.8 67.5 165 67.5 69.4 0 118.4-16.4 150-50.1s47-86.2 47-160.4v-1.8z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 632 675.2"><path d="M122 420c29.4 0 42-19.3 42-64.5V180.2c0-45.2-12.6-64.5-42-64.5S80 135 80 180.2v175.3c0 45.2 12.6 64.5 42 64.5zm95 0c32.9 0 47-21.5 47-72V167.7c0-50.5-14.1-72-47-72s-47 21.5-47 72V348c0 50.4 14 72 47 72zm100 0c32.9 0 47-21.5 47-72V187.7c0-50.5-14.1-72-47-72s-47 21.5-47 72V348c0 50.4 14 72 47 72z"/><path d="M620.1 354.7c-11.7-11.7-24.6-14.6-40.7-9.3-16.6 5.5-36.6 20.1-61.1 44.6l-37.4 37.4c-20.8 20.8-50.4 27.7-75.3 17.4-10.9-4.5-34.4-18.5-40.3-55.8-7.2 25.3-22.8 37-48.4 37-27.7 0-43.8-13.7-50-43.7-6.2 30-22.3 43.7-50 43.7-26.9 0-42.8-12.9-49.4-41.1-5.4 28.2-20 41.1-45.6 41.1-33.2 0-48-21.7-48-70.5V57C74 6.8 55.3 0 37 0 18.7 0 0 6.8 0 57v333.9C0 491.1 17 562 52 607.7c34.8 45.4 88.8 67.5 165 67.5 68 0 121.5-12 168.4-37.8 42.3-23.3 74.8-55.8 106.2-87.2l93.2-93.7c24.5-24.5 39.1-44.5 44.6-61.1 5.4-16.1 2.4-29-9.3-40.7z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464 831.1"><path d="M464 565.7c-.1-47.6-8.1-81.2-24.3-102.9s-41.3-32.1-76.8-32.1H342c-34.6 0-59.1 3.8-74.8 11.6-15.2 7.6-22.2 18.8-22.2 35.4s7.1 27.8 22.2 35.4c15.7 7.8 40.1 11.6 74.8 11.6h27c-4 39.4-20.5 57.2-52 57.2-33.2 0-49.8-19.8-52.6-63.7-17.3-8.7-25.4-22-25.4-40.6 0-18.4 8-31.7 25-40.3V72c0-50.5-14.1-72-47-72s-47 21.5-47 72v439.4c0 48.8-14.8 70.5-48 70.5-23.8 0-38.2-11.2-44.4-35.6-5 24.4-18.1 35.6-40.6 35.6-18.3 0-30.3-7.4-36.9-23.2 1.3 93.9 18.3 161 51.9 204.8 34.8 45.4 88.8 67.5 165 67.5 86.9 0 148.4-20.6 188-62.9s59-108.3 59-201.3v-1.1z"/><path d="M122 575.9c29.4 0 42-19.3 42-64.5V336.2c0-45.2-12.6-64.5-42-64.5S80 291 80 336.2v175.3c0 45.2 12.6 64.4 42 64.4zm-85 0c18.3 0 37-6.8 37-57v-136c0-50.2-18.7-57-37-57s-37 6.8-37 57v136c0 50.3 18.7 57 37 57zm325.9-151.2h1.1v-81c0-50.5-14.1-72-47-72s-47 21.5-47 72v91c16.7-6.7 40.5-9.9 72-9.9l20.9-.1zM317 575.9c26.4 0 40.6-13.8 45.3-45.2H342c-31.1 0-54.7-3.1-71.4-9.7 3.1 38.3 17.4 54.9 46.4 54.9z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 831.1"><path d="M177 444.7h20.9c75.9 0 130.2 13.1 166.1 40.1V127.9c0-50.5-14.1-72-47-72s-47 21.5-47 72V389h-6V72c0-50.5-14.1-72-47-72s-47 21.5-47 72v316.9h-6V120.4c0-45.2-12.6-64.5-42-64.5s-42 19.3-42 64.5v353.7c12.2-20.2 43.5-29.4 97-29.4z"/><path d="M414 619.7c-.2-59.2-16.9-101.2-51.2-128.3-34.7-27.4-88.6-40.7-164.9-40.7H177c-34.6 0-59.1 3.8-74.8 11.6-15.1 7.6-22.2 18.9-22.2 35.4s7.1 27.8 22.2 35.4c15.7 7.8 40.1 11.6 74.8 11.6h20.9v6H177c-53.6 0-84.8-9.2-97-29.4-.5 41.9-13.8 60.7-43 60.7-18.3 0-30.3-7.4-36.9-23.2 1.3 93.9 18.3 161 51.9 204.8 34.8 45.4 88.8 67.5 165 67.5 69.4 0 118.4-16.4 150-50.1s47-86.2 47-160.4v-.9z"/><path d="M37 575.9c18.3 0 37-6.8 37-57v-136c0-50.2-18.7-57-37-57s-37 6.8-37 57v136c0 50.3 18.7 57 37 57z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 775.3"><path d="M50 400.5c23.3-18.6 54.3-28.9 94-31.1V72c0-50.5-14.1-72-47-72S50 21.5 50 72v328.5z"/><path d="M0 562.8v2C0 639 15.4 691.5 47 725.2s80.6 50.1 150 50.1c76.2 0 130.2-22.1 165-67.5 34.9-45.6 51.9-116.3 52-216.3V157.1c0-50.2-18.7-57-37-57s-37 6.8-37 57v298.5c0 48.8-14.8 70.5-48 70.5-25.6 0-40.2-12.9-45.6-41.1-6.6 28.1-22.5 41.1-49.4 41.1-31.5 0-48-17.8-52-57.2h37c34.6 0 59.1-3.8 74.8-11.6 15.2-7.6 22.2-18.8 22.2-35.4s-7.1-27.8-22.2-35.4c-15.7-7.8-40.1-11.6-74.8-11.6h-20.9c-56.7 0-96.8 14.7-122.6 45.1C12.9 450.1.3 496.8 0 562.8z"/><path d="M182 368.9c25.7 0 46.2 2.1 62 6.6V267.8c0-50.5-14.1-72-47-72s-47 21.5-47 72V369c3.6-.1 7.3-.2 11.1-.2H182zm61.1 99.7c-15.7 4.3-35.9 6.3-61.1 6.3h-30.3c4.6 31.4 18.9 45.2 45.3 45.2 28.1 0 42.4-15.7 46.1-51.5zm90.9-13V280.3c0-45.2-12.6-64.5-42-64.5s-42 19.3-42 64.5v97c23.9 8.3 35 23 35 44.6s-11.1 36.2-34.7 44.5c2 37.5 14.7 53.8 41.7 53.8 29.4-.1 42-19.4 42-64.6z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 579.5"><path d="M414 267.3v-136c0-50.2-18.7-57-37-57s-37 6.8-37 57v136c0 50.2 18.7 57 37 57s37-6.8 37-57z"/><path d="M0 367v2c0 74.2 15.4 126.7 47 160.4s80.6 50.1 150 50.1c76.2 0 130.2-22.1 165-67.5 33.6-43.8 50.6-110.9 51.9-204.8-6.6 15.8-18.6 23.2-36.9 23.2-22.5 0-35.6-11.2-40.6-35.6-6.2 24.4-20.5 35.6-44.4 35.6-25.6 0-40.2-12.9-45.6-41.1-6.6 28.1-22.5 41.1-49.4 41.1-31.5 0-48-17.8-52-57.2h37c34.6 0 59.1-3.8 74.8-11.6C272 254 279 242.8 279 226.2s-7.1-27.8-22.2-35.4c-15.7-7.8-40.1-11.6-74.8-11.6h-20.9c-56.7 0-96.8 14.7-122.6 45.1C12.8 254.3.2 301 0 367zm182-194c25.7 0 46.2 2.1 62 6.6V72c0-50.5-14.1-72-47-72s-47 21.5-47 72v101.2c3.6-.1 7.3-.2 11.1-.2H182z"/><path d="M243.1 272.8c-15.7 4.3-35.9 6.3-61.1 6.3h-30.3c4.6 31.4 18.9 45.2 45.3 45.2 28.1 0 42.4-15.7 46.1-51.5zm90.9-13V84.5c0-45.2-12.6-64.5-42-64.5s-42 19.3-42 64.5v97c23.9 8.3 35 23 35 44.6s-11 36.2-34.7 44.5c1.9 37.5 14.7 53.8 41.7 53.8 29.4-.1 42-19.4 42-64.6zM50 204.6c23.3-18.6 54.3-28.9 94-31.1V92c0-50.5-14.1-72-47-72S50 41.5 50 92v112.6z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464 831.1"><path d="M101.1 424.7H122c31.5 0 55.3 3.2 72 9.9v-91c0-50.5-14.1-72-47-72s-47 21.5-47 72v81l1.1.1zm92.3 96.3c-16.7 6.6-40.3 9.7-71.4 9.7h-20.3c4.6 31.4 18.9 45.2 45.3 45.2 29 0 43.3-16.6 46.4-54.9z"/><path d="M0 566.8c0 93.1 19.4 159 59 201.3S160.1 831 247 831c76.2 0 130.2-22.1 165-67.5 35-45.7 52-116.5 52-216.7V213c0-50.2-18.7-57-37-57s-37 6.8-37 57v211.8h-6V120.4c0-45.2-12.6-64.5-42-64.5s-42 19.3-42 64.5V389h-6V72c0-50.5-14.1-72-47-72s-47 21.5-47 72v365.4c17 8.7 25 21.9 25 40.3 0 18.6-8.1 31.9-25.4 40.6-2.8 43.9-19.3 63.7-52.6 63.7-31.5 0-48-17.8-52-57.2h27c34.6 0 59.1-3.8 74.8-11.6 15.2-7.6 22.2-18.8 22.2-35.4s-7.1-27.8-22.2-35.4c-15.7-7.8-40.1-11.6-74.8-11.6h-20.9c-35.5 0-60.6 10.4-76.8 32.1S.2 518 0 565.5v1.3z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 632 831.1"><path d="M2.5 551.4C8.1 568 22.7 588 47.2 612.5l93.2 93.7c31.4 31.4 64 63.9 106.2 87.2 46.9 25.8 100.4 37.8 168.4 37.8 76.2 0 130.2-22.1 165-67.5 35-45.7 52-116.6 52-216.8V213c0-50.2-18.7-57-37-57s-37 6.8-37 57v211.8h-6V120.4c0-45.2-12.6-64.5-42-64.5s-42 19.3-42 64.5V389h-6V72c0-50.5-14.1-72-47-72s-47 21.5-47 72v316.9h-6v-261c0-50.5-14.1-72-47-72s-47 21.5-47 72v399c0 51.1-29.1 68.7-41.7 73.9-24.9 10.3-54.4 3.5-75.3-17.4L113.6 546c-24.5-24.5-44.5-39.1-61.1-44.6-16.1-5.4-29-2.4-40.7 9.3-11.7 11.6-14.6 24.6-9.3 40.7z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 632 831.1"><path d="M632 518.9v-136c0-50.2-18.7-57-37-57s-37 6.8-37 57v136c0 50.2 18.7 57 37 57s37-6.7 37-57zm-80-7.5V336.2c0-45.2-12.6-64.5-42-64.5s-42 19.3-42 64.5v175.3c0 45.2 12.6 64.5 42 64.5 29.4-.1 42-19.3 42-64.6z"/><path d="M2.5 551.4C8.1 568 22.7 588 47.2 612.5l93.2 93.7c31.4 31.4 64 63.9 106.2 87.2 46.9 25.8 100.4 37.8 168.4 37.8 76.2 0 130.2-22.1 165-67.5 33.6-43.8 50.6-110.9 51.9-204.8-6.6 15.8-18.6 23.2-36.9 23.2-22.5 0-35.6-11.2-40.6-35.6-6.2 24.4-20.5 35.6-44.4 35.6-33.2 0-48-21.7-48-70.5V72c0-50.5-14.1-72-47-72s-47 21.5-47 72v317h-6V127.9c0-50.5-14.1-72-47-72s-47 21.5-47 72v399c0 51.1-29.1 68.7-41.7 73.9-24.9 10.3-54.4 3.5-75.3-17.4L113.6 546c-24.5-24.5-44.5-39.1-61.1-44.6-16.1-5.4-29-2.4-40.7 9.3-11.7 11.6-14.6 24.6-9.3 40.7z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464 831.1"><path d="M0 565.7v1.1c0 93.1 19.4 159 59 201.3S160.1 831 247 831c76.2 0 130.2-22.1 165-67.5 35-45.7 52-116.5 52-216.7V213c0-50.2-18.7-57-37-57s-37 6.8-37 57v211.8h-6V120.4c0-45.2-12.6-64.5-42-64.5s-42 19.3-42 64.5V389h-6V72c0-50.5-14.1-72-47-72s-47 21.5-47 72v316.9h-6v-261c0-50.5-14.1-72-47-72s-47 21.5-47 72v296.8h22c71.2 0 103 16.3 103 53s-31.8 53-103 53h-20.9v-6H122c34.6 0 59.1-3.8 74.8-11.6 15.2-7.6 22.2-18.8 22.2-35.4s-7.1-27.8-22.2-35.4c-15.7-7.8-40.1-11.6-74.8-11.6h-20.9c-35.5 0-60.6 10.3-76.8 32.1S.1 518.1 0 565.7z"/></svg></div>
+			
+			<div class="awaiting"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 675.2"><path d="M50 300.3c23.3-18.6 54.3-28.9 94-31.1v-81.5c0-50.5-14.1-72-47-72s-47 21.5-47 72v112.6z"/><path d="M0 464.7c0 74.2 15.4 126.7 47 160.4s80.6 50.1 150 50.1c76.2 0 130.2-22.1 165-67.5 34.9-45.6 51.9-116.3 52-216.3V57c0-50.2-18.7-57-37-57s-37 6.8-37 57v298.5c0 48.8-14.8 70.5-48 70.5-25.6 0-40.2-12.9-45.6-41.1C239.8 413 223.9 426 197 426c-31.5 0-48-17.8-52-57.2h37c34.6 0 59.1-3.8 74.8-11.6 15.2-7.6 22.2-18.8 22.2-35.4s-7.1-27.8-22.2-35.4c-15.7-7.8-40.1-11.6-74.8-11.6h-21c-5.9 0-11.6.2-17.1.5-5.1.3-10.1.7-15 1.3h-.1c-40 4.8-69.7 19-90.3 43.3C12.9 350 .3 396.7 0 462.5v2.2z"/><path d="M243.1 368.4c-15.7 4.3-35.9 6.3-61.1 6.3h-30.3c4.6 31.4 18.9 45.2 45.3 45.2 28.1.1 42.4-15.6 46.1-51.5zM182 268.7c25.7 0 46.2 2.1 62 6.6V167.7c0-50.5-14.1-72-47-72s-47 21.5-47 72v101.2c3.6-.1 7.3-.2 11.1-.2H182zm152 86.8V180.2c0-45.2-12.6-64.5-42-64.5s-42 19.3-42 64.5v97c23.9 8.3 35 23 35 44.6s-11.1 36.2-34.7 44.5C252.2 403.7 265 420 292 420c29.4 0 42-19.3 42-64.5z"/></svg></div>
+			
+		</div>
+
+		<div class="buywrap">
+		
+			<div class="buy awaiting">
+				
+				<div class="inner">
+								
+					<h3>30 Hand Signs Vector Illustrations</h3>
 					
-					<div class="translator">
-						
-						<img src="slides.svg">
-											
-					</div>
+					<div><a href="https://brumale.gumroad.com/l/mani" target="_blank">Buy on Gumroad</a> ↗</div>
+																	
+					<div><a href="https://creativemarket.com/brumale/6248848-Mani-–-Hand-Signs-Illustrations" target="_blank">Buy on Creative Market</a> ↗</div>
 				
 				</div>
-				
-				<div class="button">
-					
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.4 40"><path d="M2.4 40L0 37.6 17.6 20 0 2.4 2.4 0l20 20-20 20z"/></svg>
-					
-				</div>
-				
+								
 			</div>
 			
-			<div class="content">
-			
-				<div class="column large">
-					
-					<h1>Mani is a series of hand signs vector illustrations</h1>
-	
-				</div>
+			<a class="from" href="https://www.brumale.xyz">
 				
-				<div class="column small">
-					
-					<ul>
-						
-											
-						<li>30 Hands</li>
-						
-											
-						<li>SVG Files</li>
-						
-											
-						<li>Left &amp; Right</li>
-						
-																																
-					</ul>
-					
-				</div>
+				<img class="logo" src="/website/symbol.png">
 				
-				<div class="column small">
-					
-					<a class="gumroad-button" data-gumroad-single-product="true" href="https://brumale.gumroad.com/l/mani">Buy on</a>
-					
-					<br>
-										
-					<a href="https://creativemarket.com/brumale/6248848-Mani-–-Hand-Signs-Illustrations" target="_blank" class="getoncm">Buy on Creative Market</a>
-														
-				</div>
+				<h5>Stefano Giliberti</h5>
 				
-				<div class="column full">
+			</a>
+		
+		</div>
 					
-					<a href="https://www.brumale.xyz" class="from">
+		<div class="products"></div>
 									
-						<img src="../stuff/smallstefano062021.jpg" alt="Stefano Giliberti's face in June 2021" width="48" height="48">
-						
-						<span>Stefano Giliberti</span>
-					
-					</a>
-					
-				</div>
-			
-			</div>
-			
-		</main>
-			
 	</body>
 
 </html>
