@@ -14,7 +14,7 @@ html {
 	line-height: 1.6;
 	text-transform: uppercase;
 	text-align: center;
-	cursor: url(blackgrain.svg), auto;
+	cursor: url(/website/blackgrain.svg), auto;
 }
 
 a:hover,
@@ -25,12 +25,12 @@ a:hover,
 .red:not( .loading div ),
 .theme .black:not( .loading div ),
 .italic + .white:not( .loading div ) {
-	cursor: url(whitegrain.svg), auto;
+	cursor: url(/website/whitegrain.svg), auto;
 }
 
 .black:not( .loading div ),
 .theme .white:not( .loading div ) {
-	cursor: url(redgrain.svg), auto;
+	cursor: url(/website/redgrain.svg), auto;
 }
 
 body:after {
