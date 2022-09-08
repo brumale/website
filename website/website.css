@@ -173,7 +173,7 @@ h6 {
 }
 	
 	.products a {
-		perspective: 1000;
+		perspective: 1000px;
 		transition-property:
 			opacity,
 			transform;
