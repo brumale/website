@@ -176,7 +176,8 @@ h6 {
 		perspective: 1000px;
 		transition-property:
 			opacity,
-			transform;
+			transform,
+			background-color;
 		transition-duration: 1s;
 	}
 	
@@ -185,7 +186,12 @@ h6 {
 		transform: scale( .95 );
 	}
 	
-	.products a:hover {
+	.products a:active {
+		background-color: #fff;
+		transition-duration: 0s;
+	}
+	
+	.products a:hover:not( :active ) {
 		transform: scale( 1.05 );
 	}
 	
