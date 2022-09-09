@@ -187,7 +187,6 @@ h6 {
 	}
 	
 	.products a:active {
-		background-color: #fff;
 		transition-duration: 0s;
 	}
 	
