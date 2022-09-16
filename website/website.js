@@ -33,9 +33,7 @@ function write( item, text ) {
 function offawaiting() {
 	
 	window.removeEventListener( 'scroll', handleawaiting );
-	
-	window.removeEventListener( 'load', handleawaiting );
-	
+		
 	window.removeEventListener( 'resize', handleawaiting );
 	
 }
@@ -56,7 +54,7 @@ function revealawaiting() {
 		wintop = Math.max( 0, window.pageYOffset ),
 		itemtop = item.getBoundingClientRect().top + wintop,
 		itemheight = item.offsetHeight,
-		itemfraction = itemheight / 4;
+		itemfraction = itemheight / 4.25;
 				
 		if ( itemtop + itemfraction < wintop + window.innerHeight && itemtop + itemheight - itemfraction > wintop ) {
 			
@@ -142,6 +140,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		
 		document.documentElement.classList.add( 'ready' );
 		
+		checkawaiting();
+		
 	}, 10 );
 		
 	var products = document.querySelector( '.products' );
@@ -156,16 +156,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 		request.onload = function() {
 			
-			console.log( 'load2' )
-			
 			setTimeout( function() {
 				
 				products.innerHTML = request.responseText;
-
-				awaiting = awaiting.concat( Array.from( products.children ) );
-						
+				
 				offawaiting();
 				
+				awaiting = awaiting.concat( Array.from( products.children ) );
+
 				checkawaiting();
 								
 				products
@@ -221,8 +219,6 @@ window.addEventListener( 'load', function() {
 	
 	document.documentElement.classList.add( 'loaded' );
 	
-	console.log( 'load1' )
-	
-	checkawaiting();
+	handleawaiting();
 	
 } );
