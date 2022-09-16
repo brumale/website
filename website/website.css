@@ -4,6 +4,7 @@ button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=
 @font-face {
 	font-family: Partita;
 	src: url(/website/fonts/Partita-Regular.woff2) format('woff2');
+	font-display: block;
 }
 
 html {
