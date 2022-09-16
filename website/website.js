@@ -125,8 +125,6 @@ function checkawaiting() {
 	
 	window.addEventListener( 'scroll', handleawaiting );
 
-	window.addEventListener( 'load', handleawaiting );
-
 	window.addEventListener( 'resize', handleawaiting );
 		
 	revealawaiting();
@@ -157,6 +155,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
 			rx;
 
 		request.onload = function() {
+			
+			console.log( 'load2' )
 			
 			setTimeout( function() {
 				
@@ -220,6 +220,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
 window.addEventListener( 'load', function() {
 	
 	document.documentElement.classList.add( 'loaded' );
+	
+	console.log( 'load1' )
 	
 	checkawaiting();
 	
