@@ -144,8 +144,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		
 		document.documentElement.classList.add( 'ready' );
 		
-		checkawaiting();
-		
 	}, 10 );
 		
 	var products = document.querySelector( '.products' );
@@ -222,5 +220,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 window.addEventListener( 'load', function() {
 	
 	document.documentElement.classList.add( 'loaded' );
+	
+	checkawaiting();
 	
 } );
