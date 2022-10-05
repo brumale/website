@@ -12,7 +12,7 @@
 												
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 				
-		<link rel="icon" type="image/png" href="website/symbol.png">
+		<link rel="icon" type="image/png" href="/website/symbol.png">
 		
 		<link rel="stylesheet" href="/website/website.css">
 								
@@ -30,7 +30,14 @@
 		<style>
 		
 		header {
+			position: relative;
 			text-align: left;
+			display: flex;
+			gap: 24px;
+		}
+		
+		header .words {
+			flex: 1;
 		}
 		
 		.ready h1,
@@ -104,55 +111,157 @@
 			width: 16px;
 			height: 16px;
 		}
+		
+		.image {
+			max-width: 180px;
+			position: relative;
+		}
+			
+			.image img {
+				max-width: 100%;
+				display: block;
+			}
+			
+			video {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition-property:
+					opacity,
+					filter;
+				transition-duration: 1s;
+			}
+			
+			video:not( :hover ):not( .from ) {
+				opacity: 0;
+				filter: hue-rotate( 180deg ) contrast( 3 );
+			}
+		
+		@media ( max-width: 1000px ) {
+			
+			.image {
+				max-width: 120px;
+				margin-top: 24px;
+			}
+			
+		}
+		
+		@media ( max-width: 700px ) {
 
+			header {
+				padding-right: 0;
+				gap: 12px;
+			}
+			
+		}
+		
+		@media ( max-width: 500px ) {
+			
+			header {
+				gap: 8px;
+			}
+			
+			.image {
+				max-width: 80px;
+			}
+			
+		}
+		
 		</style>
+		
+		<script>
+		
+		'use strict';
+				
+		document.addEventListener( 'DOMContentLoaded', function() {
+			
+			function where() {
+				
+				setTimeout( function() {
+					
+					video.currentTime = 0;
+										
+					video.classList.add( 'from' );
+					
+					setTimeout( function() {
+						
+						video.classList.remove( 'from' );
+						
+						where();
+						
+					}, 500 );
+										
+				}, 5000 );
+				
+			}
+			
+			var video = document.querySelector( 'video' );
+						
+			where();
+			
+		} );
+		
+		</script>
 		
 	</head>
 	
 	<body>	
 			
 		<header>
-						
-			<img class="logo" src="website/symbol.png">
 			
-			<h1 class="typing awaiting">Stefano Giliberti was born in the southern side of Italy at the start of the nineties. He has designed, coded, written products that have been sold and downloaded more than 100,000 times receiving an average rating of 4½ stars.</h1>
-						
-			<div class="social message">
+			<div class="words">
+					
+				<img class="logo" src="/website/symbol.png">
 				
-				<a href="mailto:stefanogiliberti@me.com">Message</a>
-			
-			</div>
-			
-			<div class="social">
-			
-				<a href="https://www.behance.net/brumale" target="_blank">
+				<h1 class="typing awaiting">Stefano Giliberti was born in the southern side of Italy at the start of the nineties. He has designed, coded, written products that have been sold and downloaded more than 100,000 times receiving an average rating of 4½ stars.</h1>
+							
+				<div class="social message">
 					
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.1 267.6"><path d="M388.4 37.9H280.7V11.1h107.7v26.8zM208.9 147.7q10.4 16.2 10.4 39.2c0 15.9-3.9 30.1-11.9 42.7a74 74 0 0 1-18.9 21 73.2 73.2 0 0 1-30.2 13.4 186.7 186.7 0 0 1-37.8 3.6H0V0h129.3c32.6.5 55.7 10 69.3 28.5q12.3 17.1 12.2 40.9c0 16.4-4.1 29.5-12.4 39.4q-6.9 8.4-20.4 15.2c13.7 5 24 12.9 30.9 23.7zM61.7 105.6h56.6c11.6 0 21-2.2 28.3-6.6s10.9-12.3 10.9-23.5-4.8-20.7-14.4-24.7-18.8-4.2-31.6-4.2H61.7v59zM163 183.1c0-13.9-5.7-23.5-17-28.7-6.3-2.9-15.3-4.4-26.8-4.5H61.7v71.3h56.6c11.6 0 20.6-1.5 27.1-4.7 11.7-5.8 17.6-16.9 17.6-33.4zm265.5-43.5c1.3 8.8 1.9 21.5 1.7 38.1H290.5q1.2 28.9 20 40.4c7.6 4.8 16.8 7.2 27.6 7.2s20.7-2.9 27.8-8.8a41.8 41.8 0 0 0 10.3-13.2h51.2c-1.3 11.4-7.5 22.9-18.6 34.6q-25.7 28-72.1 28-38.3 0-67.5-23.6T240 165.5q0-49.9 26.4-76.4c17.7-17.8 40.5-26.6 68.6-26.6q25 0 45.1 9t33.1 28.4c7.8 11.4 12.9 24.6 15.2 39.6zm-50.4 5q-1.4-20-13.4-30.3T335 103.9c-12.9 0-22.8 3.7-29.9 11s-11.5 17.2-13.4 29.7h86.4z"/></svg>
-					
-				</a>
-			
-			</div>
-			
-			<div class="social unsplash">
-			
-				<a href="https://unsplash.com/@stefanogiliberti" target="_blank">
-					
-					<svg viewBox="0 0 32 32"><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"/></svg>
-					
-				</a>
-			
-			</div>
-			
-			<div class="social substack">
-			
-				<a href="https://brumale.substack.com" target="_blank">
-					
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 24"><path d="M21 5H0v3h21V5ZM0 11v13l10-6 11 6V11H0ZM21 0H0v3h21V0Z"/></svg>
-					
-				</a>
-			
-			</div>
+					<a href="mailto:stefanogiliberti@me.com">Message</a>
+				
+				</div>
+				
+				<div class="social">
+				
+					<a href="https://www.behance.net/brumale" target="_blank">
 						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.1 267.6"><path d="M388.4 37.9H280.7V11.1h107.7v26.8zM208.9 147.7q10.4 16.2 10.4 39.2c0 15.9-3.9 30.1-11.9 42.7a74 74 0 0 1-18.9 21 73.2 73.2 0 0 1-30.2 13.4 186.7 186.7 0 0 1-37.8 3.6H0V0h129.3c32.6.5 55.7 10 69.3 28.5q12.3 17.1 12.2 40.9c0 16.4-4.1 29.5-12.4 39.4q-6.9 8.4-20.4 15.2c13.7 5 24 12.9 30.9 23.7zM61.7 105.6h56.6c11.6 0 21-2.2 28.3-6.6s10.9-12.3 10.9-23.5-4.8-20.7-14.4-24.7-18.8-4.2-31.6-4.2H61.7v59zM163 183.1c0-13.9-5.7-23.5-17-28.7-6.3-2.9-15.3-4.4-26.8-4.5H61.7v71.3h56.6c11.6 0 20.6-1.5 27.1-4.7 11.7-5.8 17.6-16.9 17.6-33.4zm265.5-43.5c1.3 8.8 1.9 21.5 1.7 38.1H290.5q1.2 28.9 20 40.4c7.6 4.8 16.8 7.2 27.6 7.2s20.7-2.9 27.8-8.8a41.8 41.8 0 0 0 10.3-13.2h51.2c-1.3 11.4-7.5 22.9-18.6 34.6q-25.7 28-72.1 28-38.3 0-67.5-23.6T240 165.5q0-49.9 26.4-76.4c17.7-17.8 40.5-26.6 68.6-26.6q25 0 45.1 9t33.1 28.4c7.8 11.4 12.9 24.6 15.2 39.6zm-50.4 5q-1.4-20-13.4-30.3T335 103.9c-12.9 0-22.8 3.7-29.9 11s-11.5 17.2-13.4 29.7h86.4z"/></svg>
+						
+					</a>
+				
+				</div>
+				
+				<div class="social unsplash">
+				
+					<a href="https://unsplash.com/@stefanogiliberti" target="_blank">
+						
+						<svg viewBox="0 0 32 32"><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"/></svg>
+						
+					</a>
+				
+				</div>
+				
+				<div class="social substack">
+				
+					<a href="https://brumale.substack.com" target="_blank">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 24"><path d="M21 5H0v3h21V5ZM0 11v13l10-6 11 6V11H0ZM21 0H0v3h21V0Z"/></svg>
+						
+					</a>
+				
+				</div>
+			
+			</div>
+			
+			<div class="image">
+					
+				<img src="/website/home/stefano062021.jpg" alt="Stefano Giliberti's face in June 2021">
+							
+				<video src="/website/home/campania.mp4" autoplay muted loop></video>
+				
+			</div>
+			
 		</header>
 		
 		<div class="products"></div>
