@@ -85,6 +85,13 @@ a {
 	vertical-align: top;
 }
 
+.photo {
+	width: 56px;
+	height: auto;
+	border-radius: 100%;
+	border: 2px solid #fff;
+}
+
 ::-moz-selection {
 	background-color: #fff;
 	color: #000;
