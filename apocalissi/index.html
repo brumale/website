@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+<html lang="en" class="nojs">
+
+	<head>
+				
+		<meta charset="utf-8">
+		
+		<title>Apocalissi &ndash; Print Design Series</title>
+		
+		<meta name="description" content="Apocalissi is a print design series uncovering the foundational shapes of reality. Created by Stefano Giliberti (brumale)">
+												
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="icon" type="preview/png" href="icon.png">
+				
+		<link href="https://fonts.googleapis.com/css?family=Radley|Roboto+Mono&display=swap" rel="stylesheet">
+		
+		<style>
+			
+		/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+		button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+		
+		html {
+			background-color: #000;
+			color: hsl( 0, 0%, 33% );
+			font-family: Radley, serif;
+			font-size: 22px;
+			line-height: 1.4;
+		}
+		
+		::-moz-selection {
+			background-color: #fff;
+			color: #000;
+		}
+		
+		::selection {
+			background-color: #fff;
+			color: #000;
+		}
+		
+		.js.ready body {
+			transition: opacity 3s .2s;
+		}
+			
+			.js:not( .ready ) body {
+				opacity: 0;
+			}
+		
+		.js:not( .ready ),
+		.js:not( .ready ) body {
+			height: 100%;
+		}
+		
+		.js:not( .ready ) body {
+			overflow: hidden;
+		}
+		
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+		
+		svg {
+			fill: currentcolor;
+		}
+		
+		header {
+			margin: 40px auto;
+			display: block;
+		}
+			
+			header,
+			header svg {
+				width: 100px;
+				height: 47px;
+			}
+		
+			header,
+			.products a:hover:not( :active ) span,
+			.from:hover:not( :active ) span,
+			.js:not( .loaded ) .image {
+				animation-name: allcolors;
+				animation-iteration-count: infinite;
+				animation-duration: .2s;
+				animation-timing-function: linear;
+				animation-direction: alternate;
+			}
+			
+			@keyframes allcolors {
+				0% {
+					color: hsl( 0, 10%, 50% );
+				}
+				16.6% {
+					color: hsl( 60, 10%, 50% );
+				}
+				33.2% {
+					color: hsl( 120, 10%, 50% );
+				}
+				49.8% {
+					color: hsl( 180, 10%, 50% );
+				}
+				68.4% {
+					color: hsl( 240, 10%, 50% );
+				}
+				83% {
+					color: hsl( 300, 10%, 50% );
+				}
+				100% {
+					color: hsl( 360, 10%, 50% );
+				}	
+			}
+
+		.products {
+			max-width: 600px;
+			padding: 0 24px;
+			margin: 0 auto;
+		}
+
+			.products a {
+				display: block;
+			}
+			
+			.products a + a {
+				margin-top: 48px;
+			}
+			
+		.image {
+			position: relative;
+			margin-bottom: 12px;
+			background:
+				linear-gradient(
+					137deg,
+					hsl( 0, 0%, 12% ),
+					hsl( 0, 0%, 5% )
+				);
+			perspective: 1000px;
+		}
+		
+			.js.loaded .products a:hover:not( :active ) .image {
+				border-radius: 8px;
+				animation-name: allshadowcolors;
+				animation-iteration-count: infinite;
+				animation-duration: .2s;
+				animation-timing-function: linear;
+				animation-direction: alternate;
+			}
+			
+			@keyframes allshadowcolors {
+				0% {
+					box-shadow:
+						inset 0 0 10px hsl( 0, 10%, 50% ),
+						0 0 10px hsl( 0, 10%, 50% );
+				}
+				16.6% {
+					box-shadow:
+						inset 0 0 10px hsl( 60, 10%, 50% ),
+						0 0 10px hsl( 60, 10%, 50% );
+				}
+				33.2% {
+					box-shadow:
+						inset 0 0 10px hsl( 120, 10%, 50% ),
+						0 0 10px hsl( 120, 10%, 50% );
+				}
+				49.8% {
+					box-shadow:
+						inset 0 0 10px hsl( 180, 10%, 50% ),
+						0 0 10px hsl( 180, 10%, 50% );
+				}
+				68.4% {
+					box-shadow:
+						inset 0 0 10px hsl( 240, 10%, 50% ),
+						0 0 10px hsl( 240, 10%, 50% );
+				}
+				83% {
+					box-shadow:
+						inset 0 0 10px hsl( 300, 10%, 50% ),
+						0 0 10px hsl( 300, 10%, 50% );
+				}
+				100% {
+					box-shadow:
+						inset 0 0 10px hsl( 360, 10%, 50% ),
+						0 0 10px hsl( 360, 10%, 50% );
+				}	
+			}
+	
+		.form {
+			background-image: url(forms.png);
+			background-size: 500%;
+			transition-property:
+				opacity,
+				transform;
+			transition-duration: .2s;
+			transition-timing-function: cubic-bezier(.215,.61,.355,1);
+			will-change: transform;
+		}
+		
+			.form:before {
+				content: ' ';
+				padding-top: 100%;
+				display: block;
+			}
+		
+			.js:not( .loaded ) .form {
+				opacity: 0;
+			}
+			
+		.unione[data-form='1'] .form {
+			background-position: 0% 0%;
+		}
+		
+		.unione[data-form='2'] .form {
+			background-position: 25% 0%;
+		}
+		
+		.unione[data-form='3'] .form {
+			background-position: 50% 0%;
+		}
+		
+		.unione[data-form='4'] .form {
+			background-position: 75% 0%;
+		}
+		
+		.unione[data-form='5'] .form {
+			background-position: 100% 0%;
+		}
+		
+		.ritorno[data-form='1'] .form {
+			background-position: 0% 16.666%;
+		}
+		
+		.ritorno[data-form='2'] .form {
+			background-position: 25% 16.666%;
+		}
+		
+		.ritorno[data-form='3'] .form {
+			background-position: 50% 16.666%;
+		}
+		
+		.ritorno[data-form='4'] .form {
+			background-position: 75% 16.666%;
+		}
+		
+		.ritorno[data-form='5'] .form {
+			background-position: 100% 16.666%;
+		}
+		
+		.tempio[data-form='1'] .form {
+			background-position: 0% 33.333%;
+		}
+		
+		.tempio[data-form='2'] .form {
+			background-position: 25% 33.333%;
+		}
+		
+		.tempio[data-form='3'] .form {
+			background-position: 50% 33.333%;
+		}
+		
+		.tempio[data-form='4'] .form {
+			background-position: 75% 33.333%;
+		}
+		
+		.tempio[data-form='5'] .form {
+			background-position: 100% 33.333%;
+		}
+		
+		.volta[data-form='1'] .form {
+			background-position: 0% 50%;
+		}
+		
+		.volta[data-form='2'] .form {
+			background-position: 25% 50%;
+		}
+		
+		.volta[data-form='3'] .form {
+			background-position: 50% 50%;
+		}
+		
+		.volta[data-form='4'] .form {
+			background-position: 75% 50%;
+		}
+		
+		.volta[data-form='5'] .form {
+			background-position: 100% 50%;
+		}
+		
+		.caos[data-form='1'] .form {
+			background-position: 0% 66.666%;
+		}
+		
+		.caos[data-form='2'] .form {
+			background-position: 25% 66.666%;
+		}
+		
+		.caos[data-form='3'] .form {
+			background-position: 50% 66.666%;
+		}
+		
+		.caos[data-form='4'] .form {
+			background-position: 75% 66.666%;
+		}
+		
+		.caos[data-form='5'] .form {
+			background-position: 100% 66.666%;
+		}
+		
+		.destino[data-form='1'] .form {
+			background-position: 0% 83.333%;
+		}
+		
+		.destino[data-form='2'] .form {
+			background-position: 25% 83.333%;
+		}
+		
+		.destino[data-form='3'] .form {
+			background-position: 50% 83.333%;
+		}
+		
+		.destino[data-form='4'] .form {
+			background-position: 75% 83.333%;
+		}
+		
+		.destino[data-form='5'] .form {
+			background-position: 100% 83.333%;
+		}
+		
+		.corpo[data-form='1'] .form {
+			background-position: 0% 100%;
+		}
+		
+		.corpo[data-form='2'] .form {
+			background-position: 25% 100%;
+		}
+		
+		.corpo[data-form='3'] .form {
+			background-position: 50% 100%;
+		}
+		
+		.corpo[data-form='4'] .form {
+			background-position: 75% 100%;
+		}
+		
+		.corpo[data-form='5'] .form {
+			background-position: 100% 100%;
+		}
+		
+		.spinner {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 2px;
+			height: 40px;
+			margin: -20px 0 0 -1px;
+			background-color: currentcolor;
+			transition: opacity 1s;
+			animation-name: spin;
+			animation-iteration-count: infinite;
+			animation-duration: 1s;
+			animation-timing-function: cubic-bezier(.075,.82,.165,1);
+		}
+			
+			@keyframes spin {
+				to {
+					transform: rotate( 180deg );
+				}
+			}
+			
+			.js.loaded .spinner,
+			.nojs .spinner {
+				opacity: 0;
+			}
+		
+		.products h3 {
+			float: left;
+		}
+		
+		.products span {
+			float: right;
+			transition: opacity 1s;
+		}
+		
+			.js:not( .loaded ) .products span {
+				opacity: 0;
+			}
+			
+		.products a:before,
+		.products a:after {
+			content: ' ';
+			display: table;
+		}
+		
+		.products a:after {
+			clear: both;
+		}
+		
+		.products h3,
+		.products span {
+			line-height: 32px;
+		}
+		
+		.products a:not( [data-form='1'] ) span[data-form='1'],
+		.products a:not( [data-form='2'] ) span[data-form='2'],
+		.products a:not( [data-form='3'] ) span[data-form='3'],
+		.products a:not( [data-form='4'] ) span[data-form='4'],
+		.products a:not( [data-form='5'] ) span[data-form='5'] {
+			display: none;
+		}
+		
+		.products h3,
+		.store {
+			color: hsl( 0, 0%, 25% );
+		}
+		
+		.products span,
+		.store {
+			font-family: 'Roboto Mono', monospace;
+			font-size: 66%;
+			word-spacing: -4px;
+			letter-spacing: 1px;
+		}
+		
+		.about {
+			max-width: 500px;
+			padding: 0 32px;
+			margin: 72px auto 64px;
+		}
+		
+		h1,
+		h2,
+		h3 {
+			font-size: 100%;
+			font-weight: 400;
+		}
+		
+		h1,
+		h3 {
+			margin: 0;
+		}
+		
+		h2 {
+			margin: 16px 0 0;
+		}
+
+		.store,
+		.from {
+			display: inline-block;
+			vertical-align: top;
+			transition-duration: .4s;
+		}
+		
+			.store:active,
+			.from:active {
+				transition-duration: 0s;
+			}
+			
+			.store svg,
+			.store span,
+			.from img,
+			.from span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		
+		.store {
+			margin: 20px 0;
+		}
+			
+			.store svg {
+				width: 36px;
+				height: 16px;
+			}
+		
+		.from {
+			word-spacing: -2px;
+		}
+		
+			.from img {
+				border-radius: 100%;
+				margin-right: 6px;
+				opacity: .5;
+				filter: saturate( .5 );
+			}
+		
+		@media ( max-width: 600px ) {
+	
+			.products h3,
+			.products span {
+				float: none;
+			}
+			
+		}
+
+		</style>
+				
+		<script>
+		
+		'use strict';
+
+		document.documentElement.className = 'js';
+		
+		document.addEventListener( 'DOMContentLoaded', function() {
+			
+			setTimeout( function() {
+				
+				document.documentElement.className += ' ready';
+			
+			}, 10 );
+			
+			var image = new Image(),
+				products = document.querySelector( '.products' ),
+				links = products.querySelectorAll( 'a' ),
+				forms = products.querySelectorAll( '.form' ),
+				x,
+				y,
+				ry,
+				rx;
+			
+			image.src = 'forms.png';
+			
+			image.onload = function() {
+				
+				document.documentElement.className += ' loaded';
+					
+				setTimeout( function() {
+				
+					links.forEach( function( item, index ) {
+						
+						setTimeout( function() {
+							
+							setInterval( function() {
+								
+								var form = item.dataset.form;
+								
+								item.dataset.form = form == 5 ? 1 : parseInt( form ) + 1;
+								
+							}, 4000 );
+						
+						}, index * 500 );
+					
+					} );
+				
+				}, 1000 );
+							
+			};
+							
+			forms.forEach( function( item ) {
+				
+				var parent = item.parentNode;
+										
+				parent.addEventListener( 'mousemove', function( event ) {
+					
+					x = Math.max( 0, window.pageXOffset ) + event.clientX - parent.offsetLeft;
+					y = Math.max( 0, window.pageYOffset ) + event.clientY - parent.offsetTop;
+					ry = - ( parent.offsetWidth / 2 - x ) / 33,
+					rx = ( parent.offsetHeight / 2 - y ) / 33;
+							  
+					item.style.transform = 'rotateY(' + ry + 'deg) rotateX(' + rx + 'deg)';
+				
+				} );
+				
+				parent.addEventListener( 'mouseleave', function( event ) {
+					
+					item.style.transform = 'rotateY(0) rotateX(0)';
+				
+				} );
+					
+			} );
+			
+		} );
+	
+		</script>
+
+	</head>
+	
+	<body>
+		
+		<header>
+			
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1019.4 475.3"><path d="M202.2 410.3h15v65h-15zM302.2 410.3h15v65h-15zM402.2 410.3h15v65h-15zM502.2 410.3h15v65h-15zM602.2 410.3h15v65h-15zM702.2 410.3h15v65h-15zM802.2 410.3h15v65h-15zM674.5 229.8a173.3 173.3 0 0 0 9.2-55.8c0-95.9-78.1-174-174-174s-174 78.1-174 174a173.3 173.3 0 0 0 9.2 55.8L0 363.4l5.4 14 344.9-133.7c26.9 61.3 88.2 104.2 159.4 104.2S642.1 305 669.1 243.7L1014 377.4l5.4-14zM350.7 174c0-87.7 71.3-159 159-159s159 71.3 159 159a158.4 158.4 0 0 1-8.2 50.4l-150.8-58.5-150.8 58.5a158.4 158.4 0 0 1-8.2-50.4zm159 159a159.2 159.2 0 0 1-145.4-94.6L509.7 182l145.4 56.3A159.2 159.2 0 0 1 509.7 333z"/></svg>
+		
+		</header>
+	
+		<div class="products">
+		
+			<a href="https://teespring.com/apocalissi-1" target="_blank" class="unione" data-form="1">
+				
+				<div class="image">
+				
+					<div class="form"></div>
+					
+					<div class="spinner"></div>
+				
+				</div>
+				
+				<h3>1, Unione</h3>
+				
+				<span data-form="1">Women Premium Tee, 30&euro;</span>
+				
+				<span data-form="2">Unisex Premium Tee, 30&euro;</span>
+				
+				<span data-form="3">Crewneck Sweatshirt, 34&euro;</span>
+				
+				<span data-form="4">Premium Longsleeve, 32&euro;</span>
+				
+				<span data-form="5">45x60cm Poster, 26&euro;</span>
+							
+			</a>
+			
+			<a href="https://teespring.com/apocalissi-2" target="_blank" class="ritorno" data-form="2">
+				
+				<div class="image">
+				
+					<div class="form"></div>
+					
+					<div class="spinner"></div>
+				
+				</div>
+				
+				<h3>2, Ritorno</h3>
+				
+				<span data-form="1">Women Premium Tee, 30&euro;</span>
+				
+				<span data-form="2">Unisex Premium Tee, 30&euro;</span>
+				
+				<span data-form="3">Crewneck Sweatshirt, 34&euro;</span>
+				
+				<span data-form="4">Premium Longsleeve, 32&euro;</span>
+				
+				<span data-form="5">45x60cm Poster, 26&euro;</span>
+					
+			</a>
+			
+			<a href="https://teespring.com/apocalissi-3" target="_blank" class="tempio" data-form="3">
+				
+				<div class="image">
+				
+					<div class="form"></div>
+					
+					<div class="spinner"></div>
+				
+				</div>
+					
+				<h3>3, Tempio</h3>
+				
+				<span data-form="1">Women Premium Tee, 30&euro;</span>
+				
+				<span data-form="2">Unisex Premium Tee, 30&euro;</span>
+				
+				<span data-form="3">Crewneck Sweatshirt, 34&euro;</span>
+				
+				<span data-form="4">Premium Longsleeve, 32&euro;</span>
+				
+				<span data-form="5">45x60cm Poster, 26&euro;</span>
+					
+			</a>
+			
+			<a href="https://teespring.com/apocalissi-4" target="_blank" class="volta" data-form="4">
+				
+				<div class="image">
+				
+					<div class="form"></div>
+					
+					<div class="spinner"></div>
+				
+				</div>
+				
+				<h3>4, Volta</h3>
+				
+				<span data-form="1">Women Premium Tee, 30&euro;</span>
+				
+				<span data-form="2">Unisex Premium Tee, 30&euro;</span>
+				
+				<span data-form="3">Crewneck Sweatshirt, 34&euro;</span>
+				
+				<span data-form="4">Premium Longsleeve, 32&euro;</span>
+				
+				<span data-form="5">45x60cm Poster, 26&euro;</span>
+				
+			</a>
+			
+			<a href="https://teespring.com/apocalissi-5" target="_blank" class="caos" data-form="5">
+				
+				<div class="image">
+				
+					<div class="form"></div>
+					
+					<div class="spinner"></div>
+				
+				</div>
+				
+				<h3>5, Caos</h3>
+				
+				<span data-form="1">Women Premium Tee, 30&euro;</span>
+				
+				<span data-form="2">Unisex Premium Tee, 30&euro;</span>
+				
+				<span data-form="3">Crewneck Sweatshirt, 34&euro;</span>
+				
+				<span data-form="4">Premium Longsleeve, 32&euro;</span>
+				
+				<span data-form="5">45x60cm Poster, 26&euro;</span>
+						
+			</a>
+			
+			<a href="https://teespring.com/apocalissi-6" target="_blank" class="destino" data-form="1">
+				
+				<div class="image">
+				
+					<div class="form"></div>
+					
+					<div class="spinner"></div>
+				
+				</div>
+				
+				<h3>6, Destino</h3>
+				
+				<span data-form="1">Women Premium Tee, 30&euro;</span>
+				
+				<span data-form="2">Unisex Premium Tee, 30&euro;</span>
+				
+				<span data-form="3">Crewneck Sweatshirt, 34&euro;</span>
+				
+				<span data-form="4">Premium Longsleeve, 32&euro;</span>
+				
+				<span data-form="5">45x60cm Poster, 26&euro;</span>
+						
+			</a>
+			
+			<a href="https://teespring.com/apocalissi-7" target="_blank" class="corpo" data-form="2">
+				
+				<div class="image">
+				
+					<div class="form"></div>
+					
+					<div class="spinner"></div>
+				
+				</div>
+				
+				<h3>7, Corpo</h3>
+				
+				<span data-form="1">Women Premium Tee, 30&euro;</span>
+				
+				<span data-form="2">Unisex Premium Tee, 30&euro;</span>
+				
+				<span data-form="3">Crewneck Sweatshirt, 34&euro;</span>
+				
+				<span data-form="4">Premium Longsleeve, 32&euro;</span>
+				
+				<span data-form="5">45x60cm Poster, 26&euro;</span>
+				
+			</a>
+			
+		</div>
+		
+		<div class="about">
+			
+			<h1>Apocalissi is a print design series uncovering the foundational shapes of reality</h1>
+			
+			<h2>Each part of the series is a celebration of the deeper, both mysterious and awe-inspiring architecture of nature viewed from a minimalistic point of view</h2>
+
+			<div class="store">
+				
+				<span>Printed and shipped by</span>
+				
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.4 17.6"><path d="M27.2 2.5a2.4 2.4 0 0 0-2.4 2.4 7.3 7.3 0 0 0 1.9 4.9 7.6 7.6 0 0 0 1.6 1.4 8.8 8.8 0 0 0 .9-1.8 8.6 8.6 0 0 0 .4-4.9v-.2a2.4 2.4 0 0 0-2.3-1.8zM12.4 9.3a8.7 8.7 0 0 0 .9 1.8 7.6 7.6 0 0 0 1.6-1.4 7.3 7.3 0 0 0 1.9-4.9 2.4129857 2.4129857 0 0 0-4.8-.5v.1a8.8 8.8 0 0 0-.2 1.9 8.6 8.6 0 0 0 .6 3zm26.7-1.1l2.3 1.1a10.1 10.1 0 0 1-9 5.5 10.3 10.3 0 0 1-3.3-.6 11.7 11.7 0 0 1-16.5 0 10.3 10.3 0 0 1-3.3.6A10.1 10.1 0 0 1 0 8.9l2.3-1a7.6 7.6 0 0 0 6.9 4.4l1.6-.2a11.2 11.2 0 0 1-1.3-8.2v-.3A5 5 0 0 1 14.4 0h.6a4.9 4.9 0 0 1 4.4 4.9A9.9 9.9 0 0 1 15 13a9.1 9.1 0 0 0 11.6 0 9.9 9.9 0 0 1-4.4-8.1A4.9 4.9 0 0 1 26.7 0h.6A5 5 0 0 1 32 3.6v.3a11.2 11.2 0 0 1-1.4 8.2l1.6.2a7.6 7.6 0 0 0 6.7-4.1z"/></svg>
+								
+			</div>
+			
+			<br>
+			
+			<a href="https://www.brumale.xyz" class="from">
+							
+				<img src="/stuff/smallstefano062021.jpg" alt="Stefano Giliberti's face in June 2021" width="48" height="48">
+				
+				<span>Stefano Giliberti</span>
+			
+			</a>
+			
+		</div>
+							
+	</body>
+
+</html>
