@@ -262,3 +262,67 @@ h6 {
 	}
 		
 }
+
+/* Apokalis tile */
+
+.apokalis-card {
+	position: relative;
+	aspect-ratio: 1000 / 660;
+	overflow: hidden;
+	background: #000;
+}
+
+.apokalis-logo-wrap {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	inset: 0;
+	display: block;
+	background: #000;
+	isolation: isolate;
+	--logo-mask: url('/website/products/apokalis.svg');
+}
+
+.apokalis-logo-wrap::before,
+.apokalis-logo-wrap::after {
+	content: '';
+	display: block;
+	width: 85%;
+	aspect-ratio: 4000 / 1155;
+	position: absolute;
+	left: 7.5%;
+	top: 50%;
+	transform: translateY( -55% );
+	pointer-events: none;
+	-webkit-mask-image: var( --logo-mask );
+	mask-image: var( --logo-mask );
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+}
+
+.apokalis-logo-wrap::before {
+	z-index: 2;
+	background: rgba( 0, 0, 0, .001 );
+	-webkit-backdrop-filter: grayscale( 1 );
+	backdrop-filter: grayscale( 1 );
+}
+
+.apokalis-logo-wrap::after {
+	z-index: 3;
+	background: #eae3d8;
+	mix-blend-mode: difference;
+}
+
+.apokalis-card #gl {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background: #020202;
+	z-index: 1;
+}
