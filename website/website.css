@@ -7,6 +7,12 @@ button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=
 	font-display: block;
 }
 
+@font-face {
+	font-family: Svolta;
+	src: url(/website/fonts/Svolta-Regular.woff2) format('woff2');
+	font-display: block;
+}
+
 html {
 	background-color: #eae3d8;
 	color: red;
