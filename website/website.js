@@ -236,6 +236,9 @@ window.initApokalisAnimation = function() {
 const canvas = document.getElementById('gl');
 if ( ! canvas || canvas.dataset.apokalisAnimation === 'ready' ) return;
 canvas.dataset.apokalisAnimation = 'ready';
+
+try {
+
 const glOptions = {
   antialias: true,
   alpha: false,
@@ -244,7 +247,10 @@ const glOptions = {
 };
 const gl = canvas.getContext('webgl', glOptions) || canvas.getContext('experimental-webgl', glOptions);
 
-if (!gl) throw new Error('WebGL not supported');
+if (!gl) {
+  canvas.remove();
+  return;
+}
 
 gl.disable(gl.DEPTH_TEST);
 gl.disable(gl.CULL_FACE);
@@ -1399,7 +1405,31 @@ if (fluidEnabled) {
   }
 }
 
+let logoAnimationFrameId = null;
+let logoAnimationStopped = false;
+let logoAnimationVisible = true;
+let logoAnimationObserver = null;
+
+function cancelLogoFrame(){
+  if (logoAnimationFrameId === null) return;
+  cancelAnimationFrame(logoAnimationFrameId);
+  logoAnimationFrameId = null;
+}
+
+function requestLogoFrame(){
+  if (logoAnimationStopped || !logoAnimationVisible || document.hidden || logoAnimationFrameId !== null) return;
+  logoAnimationFrameId = requestAnimationFrame(render);
+}
+
 function render(now){
+  logoAnimationFrameId = null;
+  if (logoAnimationStopped) return;
+  if (!canvas.isConnected) {
+    stopLogoAnimation();
+    return;
+  }
+  if (!logoAnimationVisible || document.hidden) return;
+
   const t = startTimeOffset + (now - start) * 0.0030;
 
   stepFluid(t);
@@ -1415,22 +1445,44 @@ function render(now){
   gl.uniform1f(uTime, t);
   gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
-  logoAnimationFrameId = requestAnimationFrame(render);
+  requestLogoFrame();
 }
 
-let logoAnimationFrameId = requestAnimationFrame(render);
-let logoAnimationStopped = false;
+function handleDocumentVisibility(){
+  if (document.hidden) cancelLogoFrame();
+  else requestLogoFrame();
+}
 
 function stopLogoAnimation(){
   if (logoAnimationStopped) return;
   logoAnimationStopped = true;
-  cancelAnimationFrame(logoAnimationFrameId);
+  cancelLogoFrame();
+  if (logoAnimationObserver) logoAnimationObserver.disconnect();
+  document.removeEventListener('visibilitychange', handleDocumentVisibility);
   window.removeEventListener('resize', resize);
   fluidTex.forEach(texture => gl.deleteTexture(texture));
   fluidFbo.forEach(framebuffer => gl.deleteFramebuffer(framebuffer));
   gl.deleteBuffer(buffer);
   gl.deleteProgram(simProgram);
   gl.deleteProgram(renderProgram);
+}
+
+document.addEventListener('visibilitychange', handleDocumentVisibility);
+
+if ('IntersectionObserver' in window) {
+  logoAnimationObserver = new IntersectionObserver(entries => {
+    logoAnimationVisible = entries[0] ? entries[0].isIntersecting : true;
+    if (logoAnimationVisible) requestLogoFrame();
+    else cancelLogoFrame();
+  }, {rootMargin:'200px 0px'});
+  logoAnimationObserver.observe(canvas);
+}
+
+canvas.stopApokalisAnimation = stopLogoAnimation;
+requestLogoFrame();
+
+} catch (error) {
+  canvas.remove();
 }
 
 };
