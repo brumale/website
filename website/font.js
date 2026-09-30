@@ -44,7 +44,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		
 		type.style.fontFamily = family || null;
 		
-		if ( type.textContent != currentfont ) {
+		if ( type.textContent != font ) {
 			
 			text = type.textContent;
 			
