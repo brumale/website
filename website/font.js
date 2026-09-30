@@ -43,9 +43,15 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	function writetype( family, text, noreset ) {
 		
 		type.style.fontFamily = family || null;
+		
+		if ( type.textContent != currentfont ) {
 			
+			text = type.textContent;
+			
+		}
+		
 		type.textContent = '';
-			
+
 		write( type, text || font );
 				
 		if ( ! noreset ) {
