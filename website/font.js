@@ -44,12 +44,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		
 		type.style.fontFamily = family || null;
 		
-		if ( type.textContent != font ) {
-			
-			text = type.textContent;
-			
-		}
-		
 		type.textContent = '';
 
 		write( type, text || font );
@@ -71,8 +65,9 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		loading = true;
 		
 		var isitalic = italic.classList.contains( 'isitalic' ),
-			currentfont = font + '-';
-		
+			currentfont = font + '-',
+			text = type.textContent;
+
 		if ( ! isitalic || style.textContent != 'Regular' ) {
 		
 			currentfont += style.textContent.replaceAll( ' ', '' );
@@ -81,7 +76,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 				
 		if ( ! isitalic && currentfont == font + '-Regular' ) {
 			
-			writetype();
+			writetype( null, text );
 						
 			return;
 			
@@ -95,7 +90,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 						
 		if ( loadedfonts.indexOf( currentfont ) > -1 ) {
 			
-			writetype( currentfont );
+			writetype( currentfont, text );
 			
 		}
 		else {
@@ -122,7 +117,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 										
 					type.classList.add( 'font' );
 					
-					writetype( currentfont );
+					writetype( currentfont, text );
 									
 				}, 280 );
 				
